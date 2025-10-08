@@ -5,7 +5,7 @@ layout: null
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Mia — Mentora de Negocios en WhatsApp (Honduras)</title>
-<meta name="description" content="Mia es una mentora 24/7 en WhatsApp que ayuda a microempresarios a mejorar marketing, precios, finanzas y más — basada en SIYB de la OIT." />
+<meta name="description" content="Mia es una mentora 24/7 en WhatsApp que ayuda a microempresarios y microempresarias a mejorar marketing, precios, finanzas y más — basada en SIYB de la OIT." />
 <style>
   /* ----- Reset (scoped) ----- */
   *, *::before, *::after { box-sizing: border-box; }
@@ -182,6 +182,21 @@ layout: null
   }
 
   .logo-ccit img { height: 40px; }
+
+  .footer-logos{
+    display:flex; gap:3rem; justify-content:center; align-items:flex-start; flex-wrap:wrap;
+    text-align:center;
+  }
+  .footer-logos a.logo-item{
+    display:inline-flex; flex-direction:column; align-items:center; text-decoration:none;
+  }
+  .footer-logos .logo-caption{
+    margin:0 0 .5rem 0; font-weight:600; line-height:1.2;
+    color:#1db6a6; /* opcional para ese verde agua */
+  }
+  .footer-logos img{ height:5rem; max-width:12rem; object-fit:contain; }
+  .footer-logos img.actemp{ height:7rem; max-width:20rem; } /* ACT/EMP más grande */
+
 </style>
 
 <body>
@@ -210,7 +225,7 @@ layout: null
     <div class="wrap">
       <h2 class="text-3xl md:text-5xl font-bold">Conoce a Mia</h2>
       <p class="mt-8" style="font-size: 1.1rem; line-height: 1.6;">
-        Los empresarios pueden conversar con Mia en tiempo real, por voz, texto o imágenes. Una forma práctica y cercana de recibir orientación personalizada para hacer crecer su negocio.
+        Los empresarios y empresarias pueden conversar con Mia en tiempo real, por voz, texto o imágenes. Una forma práctica y cercana de recibir orientación personalizada para hacer crecer su negocio.
       </p>
       <div class="card mt-16" style="font-size: 1.1rem; line-height: 1.5;">
         <em>“Ana, calculemos tu punto de equilibrio juntas. ¿Cuáles son tus costos fijos del mes?”</em>
@@ -222,7 +237,7 @@ layout: null
         </figure>
         <figure class="card">
           <img src="{{ '/assets/projects/mia/images/mia-whatsapp-ejemplo-1.jpeg' | relative_url }}" alt="Ilustración: Mia con interface de WhatsApp" />
-          <figcaption class="caption mt-8">Los empresarios pueden compartir notas a mano.</figcaption>
+          <figcaption class="caption mt-8">Los empresarios y empresarias pueden compartir notas a mano.</figcaption>
         </figure>
       </div>
     </div>
@@ -233,7 +248,7 @@ layout: null
     <div class="wrap">
       <h2>Conversaciones Reales</h2>
       <p class="mt-8" style="font-size: 1.1rem; line-height: 1.6;"> 
-        Una de las funciones favoritas de los empresarios es que Mia <strong>responde con notas de voz</strong>: una forma más cercana, natural y al ritmo de cada conversación.
+        Una de las funciones favoritas de los empresarios y empresarias es que Mia <strong>responde con notas de voz</strong>: una forma más cercana, natural y al ritmo de cada conversación.
       </p>
       <div class="grid cols-2 mt-16">
         <div class="card audio-panel">
@@ -258,7 +273,7 @@ layout: null
   <section id="capacidades" class="section">
     <div class="wrap">
       <h2>¿Qué puede hacer Mia?</h2>
-      <p class="mt-8" style="font-size: 1.1rem; line-height: 1.6;">Mia acompaña al empresario identificando oportunidades reales de mejora, adaptadas a su perfil y ritmo. Es como tener una mentora de alto nivel siempre a tu lado. Estos son los temas principales en los que Mia brinda asesoría empresarial, con base en la metodología IMESUN y las guías legales de la CCIT:</p>
+      <p class="mt-8" style="font-size: 1.1rem; line-height: 1.6;">Mia acompaña al empresario (a) identificando oportunidades reales de mejora, adaptadas a su perfil y ritmo. Es como tener una mentora de alto nivel siempre a tu lado. Estos son los temas principales en los que Mia brinda asesoría empresarial, con base en la metodología IMESUN y las guías legales de la CCIT:</p>
 
       <div class="grid cols-3 mt-16">
         <div class="card feat"><span class="dot"></span><div><strong>Marketing</strong><br><span class="caption">Clientes, mensajes y promos simples que mueven producto.</span></div></div>
@@ -279,14 +294,14 @@ layout: null
         <h2>¿Por qué Mia?</h2>
         <p class="mt-8">
         La mayoría de microempresas en la economía informal no tienen acceso a formación empresarial de alto nivel. 
-        <strong>Mia</strong> ofrece una solución inovadora, escalable, de bajo costo y alta calidad, brindando asesoría en tiempo real y según las necesidades de cada empresario.  
+        <strong>Mia</strong> ofrece una solución inovadora, escalable, de bajo costo y alta calidad, brindando asesoría en tiempo real y según las necesidades de cada empresario y empresaria.  
         Su <strong>apoyo continuo</strong>, <strong>lógica personalizada</strong> y <strong>estrategia financiera</strong> generan confianza y resultados sostenibles a gran escala.
         </p>
 
         <div class="grid cols-3 mt-16">
         <div class="card">
             <strong>Siempre activa</strong><br>
-            <span class="caption">Disponible día y noche dentro de WhatsApp. Sin nuevas apps ni complicaciones para los empresarios.</span>
+            <span class="caption">Disponible día y noche dentro de WhatsApp. Sin nuevas apps ni complicaciones para los empresarios y empresarias.</span>
         </div>
         <div class="card">
             <strong>Con contexto</strong><br>
@@ -317,7 +332,7 @@ layout: null
   <!-- VIDEO VERTICAL (PROMO/DEMO) -->
   <section class="section">
     <div class="wrap">
-      <h2>Video: Mia en acción</h2>
+      <h2>Vídeo: Mia en acción</h2>
       <p class="mt-8">Demostración corta de Mia resolviendo dudas dentro del chat.</p>
       <div class="mia-video">
         <video controls playsinline poster="{{ '/assets/projects/mia/images/mia.jpeg' | relative_url }}">
@@ -330,7 +345,7 @@ layout: null
   <!-- TESTIMONIOS -->
   <section class="section">
     <div class="wrap">
-      <h2>¿Qué opinan los empresarios?</h2>
+      <h2>¿Qué opinan los empresarios y empresarias?</h2>
       ¡El 90% de los empresarios que han utilizado a Mia consideran que es útil para su negocio!
       <div class="grid cols-2 mt-16">
         <div class="card">
@@ -379,22 +394,26 @@ layout: null
     </div>
   </section>
 
-  <footer class="wrap center">
-    <nav class="footer-logos" aria-label="Aliados y organizadores">
-        <a href="https://ccit.hn" target="_blank" rel="noopener">
-          <img src="{{ '/assets/projects/mia/images/ccit.png' | relative_url }}" alt="CCIT — Cámara de Comercio e Industria de Tegucigalpa">
-        </a>
-        <a href="https://www.ilo.org" target="_blank" rel="noopener">
-          <img src="{{ '/assets/projects/mia/images/ccit-oit.png' | relative_url }}" alt="CCIT y OIT — Organización Internacional del Trabajo">
-        </a>
-        <a href="https://theatomic.ai" target="_blank" rel="noopener">
-          <img src="{{ '/assets/img/logos/logo_light_blue.png' | relative_url }}" alt="Atomic AI">
-        </a>
-    </nav>
-    <small class="footer-note">
-        © <span id="y"></span> Mia - MentorIA CCIT Honduras
-    </small>
-  </footer>
+<footer class="wrap center">
+  <nav class="footer-logos" aria-label="Aliados y organizadores">
+    <a href="https://ccit.hn" target="_blank" rel="noopener" class="logo-item">
+      <span class="logo-caption">Implementado por</span>
+      <img src="{{ '/assets/projects/mia/images/ccit.png' | relative_url }}" alt="CCIT — Cámara de Comercio e Industria de Tegucigalpa"  style="height: 10rem; max-width: 25rem !important;">
+    </a>
+
+    <a href="https://www.ilo.org" target="_blank" rel="noopener" class="logo-item">
+      <span class="logo-caption">Financiado por</span>
+      <img class="actemp" src="{{ '/assets/projects/mia/images/actemp.png' | relative_url }}" alt="OIT — ACT/EMP" style="height: 10rem; max-width: 25rem !important;">
+    </a>
+
+    <a href="https://theatomic.ai" target="_blank" rel="noopener" class="logo-item">
+      <span class="logo-caption">Desarrollado por</span>
+      <img src="{{ '/assets/img/logos/logo_light_blue.png' | relative_url }}" alt="Atomic AI" style="height: 10rem; max-width: 25rem !important;">
+    </a>
+  </nav>
+
+  <small class="footer-note">© <span id="y"></span> Mia - MentorIA CCIT Honduras</small>
+</footer>
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
