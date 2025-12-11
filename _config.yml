@@ -3,7 +3,7 @@ title: Atomic AI
 email: contact@theatomic.ai
 description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "" # the base hostname & protocol for your site
+url: "https://theatomicai.github.io" # the base hostname & protocol for your site
 repository: theatomicai/theatomicai.github.io
 
 twitter_username:

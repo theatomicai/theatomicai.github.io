@@ -4,7 +4,7 @@ title: Our Services
 permalink: /services
 ---
 
-<section id="services-hero" class="services-hero-section">
+<section id="services-hero" class="services-hero-section" style="margin-top: 0 !important; padding-top: 100px !important;">
     <div class="services-hero-background"></div>
     <div class="container">
         <div class="row">
@@ -70,7 +70,7 @@ permalink: /services
         <div class="row">
             <div class="col-lg-5">
                 <div style="background: linear-gradient(135deg, rgba(10,40,75,0.1) 0%, rgba(14,165,163,0.1) 100%); padding: 60px 40px; border-radius: 20px; height: 100%; display: flex; align-items: center; justify-content: center;">
-                    <img src="/assets/projects/mia/images/custom.jpeg" alt="Custom AI Development" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+                    <img src="{{ '/assets/projects/mia/images/custom.jpeg' | relative_url }}" alt="Custom AI Development" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
                 </div>
             </div>
             <div class="col-lg-7">
@@ -143,7 +143,7 @@ permalink: /services
             </div>
             <div class="col-lg-5">
                 <div style="background: linear-gradient(135deg, rgba(10,40,75,0.1) 0%, rgba(14,165,163,0.1) 100%); padding: 60px 40px; border-radius: 20px; height: 100%; display: flex; align-items: center; justify-content: center;">
-                    <img src="/assets/projects/mia/images/etl.png" alt="ETL & Data Engineering" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+                    <img src="{{ '/assets/projects/mia/images/etl.png' | relative_url }}" alt="ETL & Data Engineering" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
                 </div>
             </div>
         </div>
@@ -156,7 +156,7 @@ permalink: /services
         <div class="row">
             <div class="col-lg-5">
                 <div style="background: linear-gradient(135deg, rgba(10,40,75,0.1) 0%, rgba(14,165,163,0.1) 100%); padding: 60px 40px; border-radius: 20px; height: 100%; display: flex; align-items: center; justify-content: center;">
-                    <img src="/assets/projects/mia/images/Dash2.jpeg" alt="Dashboards & Analytics" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+                    <img src="{{ '/assets/projects/mia/images/Dash2.jpeg' | relative_url }}" alt="Dashboards & Analytics" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
                 </div>
             </div>
             <div class="col-lg-7">
@@ -229,7 +229,7 @@ permalink: /services
             </div>
             <div class="col-lg-5">
                 <div style="background: linear-gradient(135deg, rgba(10,40,75,0.1) 0%, rgba(14,165,163,0.1) 100%); padding: 60px 40px; border-radius: 20px; height: 100%; display: flex; align-items: center; justify-content: center;">
-                    <img src="/assets/projects/mia/images/Dash1.jpeg" alt="Custom Software Solutions" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+                    <img src="{{ '/assets/projects/mia/images/Dash1.jpeg' | relative_url }}" alt="Custom Software Solutions" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
                 </div>
             </div>
         </div>
@@ -242,7 +242,7 @@ permalink: /services
         <div class="row">
             <div class="col-lg-5">
                 <div style="background: linear-gradient(135deg, rgba(10,40,75,0.1) 0%, rgba(14,165,163,0.1) 100%); padding: 60px 40px; border-radius: 20px; height: 100%; display: flex; align-items: center; justify-content: center;">
-                    <img src="/assets/projects/mia/images/C.jpg" alt="Training & AI Literacy" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+                    <img src="{{ '/assets/projects/mia/images/C.jpg' | relative_url }}" alt="Training & AI Literacy" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
                 </div>
             </div>
             <div class="col-lg-7">

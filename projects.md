@@ -5,7 +5,7 @@ permalink: /projects
 ---
 
 <!-- Hero Section -->
-<section id="projects-hero" class="projects-hero-section">
+<section id="projects-hero" class="projects-hero-section" style="margin-top: 0 !important; padding-top: 100px !important;">
     <div class="projects-hero-background"></div>
     <div class="container">
         <div class="row">
@@ -38,7 +38,7 @@ permalink: /projects
                 <div class="col-lg-6">
                     <div class="project-card-image">
                         <div class="project-icon-wrapper project-icon-mia">
-                            <img src="/assets/projects/mia/images/mia.jpeg" alt="Mia – AI Mentor" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+                            <img src="{{ '/assets/projects/mia/images/mia.jpeg' | relative_url }}" alt="Mia – AI Mentor" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
                         </div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@ permalink: /projects
                             </div>
                         </div>
                         <div class="project-cta">
-                            <a href="/mia" class="project-link-btn" target="_blank" data-translate="projects.learn-more">
+                            <a href="{{ '/mia' | relative_url }}" class="project-link-btn" target="_blank" data-translate="projects.learn-more">
                                 Learn More
                                 <i class="fa fa-arrow-right"></i>
                             </a>
@@ -84,7 +84,7 @@ permalink: /projects
                 <div class="col-lg-6 col-lg-push-6">
                     <div class="project-card-image">
                         <div class="project-icon-wrapper project-icon-potenza">
-                            <img src="/assets/projects/mia/images/LOGO POTENZA-04.png" alt="Potenza – ETL & Solar Intelligence Dashboard" style="width: 100%; height: 100%; object-fit: contain; border-radius: 20px;">
+                            <img src="{{ '/assets/projects/mia/images/LOGO POTENZA-04.png' | relative_url }}" alt="Potenza – ETL & Solar Intelligence Dashboard" style="width: 100%; height: 100%; object-fit: contain; border-radius: 20px;">
                         </div>
                     </div>
                 </div>
@@ -130,7 +130,7 @@ permalink: /projects
                 <div class="col-lg-6">
                     <div class="project-card-image">
                         <div class="project-icon-wrapper project-icon-custom">
-                            <img src="/assets/projects/mia/images/ortodonciasv1.png" alt="Custom Software for Clinics & Energy" style="width: 100%; height: 100%; object-fit: contain; border-radius: 20px;">
+                            <img src="{{ '/assets/projects/mia/images/ortodonciasv1.png' | relative_url }}" alt="Custom Software for Clinics & Energy" style="width: 100%; height: 100%; object-fit: contain; border-radius: 20px;">
                         </div>
                     </div>
                 </div>
