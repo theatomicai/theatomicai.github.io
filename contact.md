@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Contact Us
-permalink: /contact/
+permalink: /contact
 ---
 
 <section id="contact-page" style="padding: 100px 0; background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);">
@@ -35,7 +35,7 @@ permalink: /contact/
             <!-- Contact Form -->
             <div class="col-lg-8 col-lg-offset-2">
                 <div class="contact-form-wrapper">
-                    <form id="contact-form" action="https://formspree.io/f/xpwnqjqk" method="POST" class="contact-form-modern">
+                    <form id="contact-form" action="https://formspree.io/f/xpwnqjqk" method="POST" class="contact-form-modern" novalidate>
                         <div class="form-group-modern">
                             <label for="name" data-translate="contact.form.name.label">Your Name</label>
                             <input type="text" id="name" name="name" class="form-control-modern" required 
@@ -46,6 +46,8 @@ permalink: /contact/
                             <label for="email" data-translate="contact.form.email.label">Your Email</label>
                             <input type="email" id="email" name="email" class="form-control-modern" required 
                                    placeholder="" data-translate-placeholder="contact.form.email.placeholder">
+                            <!-- Hidden field for Formspree reply-to -->
+                            <input type="hidden" name="_replyto" id="_replyto">
                         </div>
 
                         <div class="form-group-modern">
@@ -134,7 +136,7 @@ permalink: /contact/
     color: white;
     padding: 12px 24px;
     border-radius: 50px;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -222,7 +224,7 @@ permalink: /contact/
     font-weight: 600;
     color: #0A284B;
     margin-bottom: 10px;
-    font-size: 14px;
+    font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -371,20 +373,85 @@ select.form-control-modern {
 }
 
 @media (max-width: 767px) {
+    #contact-page {
+        padding: 60px 0 !important;
+    }
+    
     .contact-hero-section {
-        padding: 30px 15px 40px;
+        padding: 40px 20px 50px;
+    }
+    
+    .contact-hero-badge {
+        font-size: 14px;
+        padding: 10px 20px;
+        margin-bottom: 24px;
     }
     
     .contact-title-main {
-        font-size: 2rem;
+        font-size: clamp(1.75rem, 7vw, 2.2rem) !important;
+        line-height: 1.15;
+        margin-bottom: 20px;
     }
     
     .contact-hero-description {
-        font-size: 16px;
+        font-size: clamp(1rem, 4vw, 1.15rem) !important;
+        line-height: 1.65;
+        padding: 0 10px;
+    }
+    
+    .contact-hero-divider {
+        margin: 30px auto 35px;
+        max-width: 300px;
     }
     
     .contact-form-wrapper {
+        padding: 35px 25px;
+        border-radius: 16px;
+    }
+    
+    .form-group-modern {
+        margin-bottom: 24px;
+        
+        label {
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        
+        .form-control-modern {
+            padding: 14px 18px;
+            font-size: 16px; // Prevents zoom on iOS
+            border-radius: 8px;
+        }
+    }
+    
+    .btn-modern-contact {
+        padding: 16px 32px;
+        font-size: 16px;
+        width: 100%;
+    }
+    
+    .contact-info-card {
         padding: 30px 20px;
+        margin-bottom: 24px;
+        
+        .contact-info-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 16px;
+            
+            i {
+                font-size: 24px;
+            }
+        }
+        
+        h4 {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+        
+        p {
+            font-size: 16px;
+        }
     }
 }
 </style>
@@ -398,14 +465,39 @@ document.addEventListener('DOMContentLoaded', function() {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
             
+            // Validate form before submission
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+            
             // Show loading state
             const submitBtn = form.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin" style="margin-right: 8px;"></i>Sending...';
             
-            // Get form data
+            // Hide previous messages
+            messageDiv.style.display = 'none';
+            
+            // Sync email to _replyto field for Formspree BEFORE creating FormData
+            const emailField = form.querySelector('#email');
+            const replyToField = form.querySelector('#_replyto');
+            if (emailField && replyToField) {
+                replyToField.value = emailField.value;
+            }
+            
+            // Get form data (after updating _replyto)
             const formData = new FormData(form);
+            
+            // Add Formspree specific fields
+            formData.append('_format', 'plain');
+            
+            // Log form data for debugging (remove in production if needed)
+            console.log('Submitting form to:', form.action);
+            for (let [key, value] of formData.entries()) {
+                console.log(key + ':', value);
+            }
             
             // Submit to Formspree
             fetch(form.action, {
@@ -415,32 +507,69 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Accept': 'application/json'
                 }
             })
-            .then(response => {
-                if (response.ok) {
-                    messageDiv.className = 'form-message success';
-                    messageDiv.style.display = 'block';
-                    const currentLang = localStorage.getItem('preferredLanguage') || 'en';
-                    const successMessages = {
-                        en: 'Thank you! Your message has been sent successfully. We\'ll get back to you soon.',
-                        es: '¡Gracias! Tu mensaje ha sido enviado exitosamente. Te responderemos pronto.',
-                        fr: 'Merci! Votre message a été envoyé avec succès. Nous vous répondrons bientôt.'
-                    };
-                    messageDiv.textContent = successMessages[currentLang] || successMessages.en;
-                    form.reset();
+            .then(async response => {
+                console.log('Formspree response status:', response.status);
+                
+                // Try to parse JSON, but handle non-JSON responses gracefully
+                let data;
+                const contentType = response.headers.get('content-type');
+                if (contentType && contentType.includes('application/json')) {
+                    data = await response.json();
+                    console.log('Formspree response data:', data);
                 } else {
-                    throw new Error('Network response was not ok');
+                    const text = await response.text();
+                    console.log('Formspree response (non-JSON):', text);
+                    data = { error: text || 'Unknown error' };
                 }
+                
+                    if (response.ok) {
+                        messageDiv.className = 'form-message success';
+                        messageDiv.style.display = 'block';
+                        const currentLang = localStorage.getItem('preferredLanguage') || 'en';
+                        const successMessages = {
+                            en: 'Thank you! Your message has been sent successfully. We\'ll get back to you soon.',
+                            es: '¡Gracias! Tu mensaje ha sido enviado exitosamente. Te responderemos pronto.',
+                            fr: 'Merci! Votre message a été envoyé avec succès. Nous vous répondrons bientôt.'
+                        };
+                        messageDiv.textContent = successMessages[currentLang] || successMessages.en;
+                        form.reset();
+                    } else {
+                        // Formspree returns error details in the response
+                    const errorMsg = data.error || data.message || 'Network response was not ok';
+                        console.error('Formspree error:', errorMsg);
+                        throw new Error(errorMsg);
+                    }
             })
             .catch(error => {
+                console.error('Form submission error:', error);
                 messageDiv.className = 'form-message error';
                 messageDiv.style.display = 'block';
                 const currentLang = localStorage.getItem('preferredLanguage') || 'en';
-                const errorMessages = {
-                    en: 'Oops! There was an error sending your message. Please try again or email us directly.',
-                    es: '¡Ups! Hubo un error al enviar tu mensaje. Por favor intenta de nuevo o escríbenos directamente.',
-                    fr: 'Oups! Une erreur s\'est produite lors de l\'envoi de votre message. Veuillez réessayer ou nous écrire directement.'
-                };
-                messageDiv.textContent = errorMessages[currentLang] || errorMessages.en;
+                
+                // More specific error messages
+                let errorMsg = '';
+                if (error.message && error.message.includes('reCAPTCHA')) {
+                    errorMsg = currentLang === 'es' 
+                        ? 'Por favor completa el reCAPTCHA e intenta de nuevo.'
+                        : currentLang === 'fr'
+                        ? 'Veuillez compléter le reCAPTCHA et réessayer.'
+                        : 'Please complete the reCAPTCHA and try again.';
+                } else if (error.message && error.message.includes('rate limit')) {
+                    errorMsg = currentLang === 'es'
+                        ? 'Has enviado demasiados mensajes. Por favor espera unos minutos e intenta de nuevo.'
+                        : currentLang === 'fr'
+                        ? 'Vous avez envoyé trop de messages. Veuillez attendre quelques minutes et réessayer.'
+                        : 'You have sent too many messages. Please wait a few minutes and try again.';
+                } else {
+                    const errorMessages = {
+                        en: 'Oops! There was an error sending your message. Please try again or email us directly at contact@theatomic.ai',
+                        es: '¡Ups! Hubo un error al enviar tu mensaje. Por favor intenta de nuevo o escríbenos directamente a contact@theatomic.ai',
+                        fr: 'Oups! Une erreur s\'est produite lors de l\'envoi de votre message. Veuillez réessayer ou nous écrire directement à contact@theatomic.ai'
+                    };
+                    errorMsg = errorMessages[currentLang] || errorMessages.en;
+                }
+                
+                messageDiv.textContent = errorMsg;
             })
             .finally(() => {
                 submitBtn.disabled = false;

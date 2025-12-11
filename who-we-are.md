@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Who We Are - Empowering Organizations Through Intelligent Innovation
-permalink: /who-we-are/
+permalink: /team
 ---
 
 <!-- Team Detailed Section -->
@@ -51,7 +51,7 @@ permalink: /who-we-are/
                 <div class="team-card-modern">
                     <div class="team-card-header">
                         <div class="team-avatar">
-                            <i class="fa fa-user"></i>
+                            <img src="/assets/projects/mia/images/G.png" alt="Gerardo Aguilar" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
                         </div>
                         <div class="team-info">
                             <h3>Gerardo Aguilar</h3>
@@ -591,11 +591,107 @@ permalink: /who-we-are/
 
 @media (max-width: 767px) {
     #team-page {
-        padding: 60px 0;
+        padding: 60px 0 !important;
+        padding-top: 60px !important;
+    }
+    
+    .team-hero-section {
+        padding: 40px 20px 50px !important;
+    }
+    
+    .team-title-badge {
+        font-size: 11px !important;
+        padding: 6px 12px;
+        margin-bottom: 16px;
+    }
+    
+    .team-title-main {
+        font-size: clamp(2rem, 8vw, 2.5rem) !important;
+        line-height: 1.1;
+        margin-bottom: 16px;
+    }
+    
+    .team-hero-description {
+        font-size: clamp(1rem, 4vw, 1.15rem) !important;
+        line-height: 1.65;
+        padding: 0 15px;
+    }
+    
+    .team-stats {
+        gap: 20px !important;
+        padding: 25px 20px !important;
+        margin-top: 35px !important;
+        
+        .stat-item {
+            .stat-number {
+                font-size: clamp(1.75rem, 6vw, 2rem) !important;
+            }
+            
+            .stat-label {
+                font-size: 11px;
+            }
+        }
+    }
+    
+    .team-card-modern {
+        margin-bottom: 30px !important;
+        
+        .team-card-header {
+            padding: 30px 20px !important;
+            
+            .team-avatar {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 16px;
+                
+                i {
+                    font-size: 32px;
+                }
+            }
+            
+            h3 {
+                font-size: clamp(1.3rem, 5vw, 1.6rem) !important;
+                margin-bottom: 6px;
+            }
+            
+            .team-role {
+                font-size: 12px;
+            }
+        }
+        
+        .team-card-body {
+            padding: 30px 20px !important;
+            
+            .team-description {
+                font-size: clamp(0.95rem, 3.8vw, 1.05rem) !important;
+                line-height: 1.65;
+                margin-bottom: 16px;
+            }
+            
+            .team-skills {
+                padding-top: 20px;
+                margin-top: 20px;
+                
+                h4 {
+                    font-size: 12px;
+                    margin-bottom: 12px;
+                }
+                
+                .skills-list li {
+                    font-size: 13px;
+                    padding: 8px 0;
+                    
+                    i {
+                        font-size: 11px;
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
     }
     
     .section-heading {
-        font-size: 2rem !important;
+        font-size: clamp(1.75rem, 7vw, 2.2rem) !important;
     }
 }
 </style>

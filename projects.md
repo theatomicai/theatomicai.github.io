@@ -1,19 +1,27 @@
 ---
 layout: page
 title: Featured Projects
-permalink: /projects/
+permalink: /projects
 ---
 
 <!-- Hero Section -->
-<section id="projects-hero" style="padding-top: 80px !important; padding-bottom: 80px; margin-top: 0 !important; background: linear-gradient(135deg, #0A284B 0%, #1a4a7a 100%); color: white;">
+<section id="projects-hero" class="projects-hero-section">
+    <div class="projects-hero-background"></div>
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
+                <span class="projects-hero-label" data-translate="projects.page.label">Our Work</span>
                 <div class="projects-hero-content">
-                    <span class="projects-hero-label" data-translate="projects.page.label">Our Work</span>
                     <h1 class="projects-hero-title" data-translate="projects.page.title">Featured Projects</h1>
+                    <div class="projects-hero-divider">
+                        <div class="divider-line"></div>
+                        <div class="divider-icon">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                        <div class="divider-line"></div>
+                    </div>
                     <p class="projects-hero-description" data-translate="projects.page.description">
-                        Explore our innovative AI solutions that are transforming businesses across Central America. Each project represents our commitment to delivering cutting-edge technology with real-world impact.
+                        Explore our innovative AI solutions that are transforming businesses across Central America. Each project represents our commitment to delivering <span class="highlight-text">cutting-edge technology</span> with <span class="highlight-accent">real-world impact</span>.
                     </p>
                 </div>
             </div>
@@ -30,7 +38,7 @@ permalink: /projects/
                 <div class="col-lg-6">
                     <div class="project-card-image">
                         <div class="project-icon-wrapper project-icon-mia">
-                            <i class="fa fa-comments"></i>
+                            <img src="/assets/projects/mia/images/mia.jpeg" alt="Mia – AI Mentor" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
                         </div>
                     </div>
                 </div>
@@ -76,7 +84,7 @@ permalink: /projects/
                 <div class="col-lg-6 col-lg-push-6">
                     <div class="project-card-image">
                         <div class="project-icon-wrapper project-icon-potenza">
-                            <i class="fa fa-sun-o"></i>
+                            <img src="/assets/projects/mia/images/LOGO POTENZA-04.png" alt="Potenza – ETL & Solar Intelligence Dashboard" style="width: 100%; height: 100%; object-fit: contain; border-radius: 20px;">
                         </div>
                     </div>
                 </div>
@@ -106,8 +114,8 @@ permalink: /projects/
                             </div>
                         </div>
                         <div class="project-cta">
-                            <a href="/contact" class="project-link-btn" data-translate="projects.contact-us">
-                                Contact Us
+                            <a href="https://potenzacorp.com/" class="project-link-btn" target="_blank" data-translate="projects.learn-more">
+                                Learn More
                                 <i class="fa fa-arrow-right"></i>
                             </a>
                         </div>
@@ -122,7 +130,7 @@ permalink: /projects/
                 <div class="col-lg-6">
                     <div class="project-card-image">
                         <div class="project-icon-wrapper project-icon-custom">
-                            <i class="fa fa-cogs"></i>
+                            <img src="/assets/projects/mia/images/ortodonciasv1.png" alt="Custom Software for Clinics & Energy" style="width: 100%; height: 100%; object-fit: contain; border-radius: 20px;">
                         </div>
                     </div>
                 </div>
@@ -152,8 +160,8 @@ permalink: /projects/
                             </div>
                         </div>
                         <div class="project-cta">
-                            <a href="/contact" class="project-link-btn" data-translate="projects.contact-us">
-                                Contact Us
+                            <a href="https://ortodonciasv.com/" class="project-link-btn" target="_blank" data-translate="projects.learn-more">
+                                Learn More
                                 <i class="fa fa-arrow-right"></i>
                             </a>
                         </div>

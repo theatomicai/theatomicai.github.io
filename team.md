@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Our Team
-permalink: /team/
+permalink: /team
 ---
 
 <section id="team-page" style="padding: 100px 0; margin-top: 0 !important; padding-top: 100px !important; background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);">
@@ -50,7 +50,7 @@ permalink: /team/
                 <div class="team-card-modern">
                     <div class="team-card-header">
                         <div class="team-avatar">
-                            <i class="fa fa-user"></i>
+                            <img src="/assets/projects/mia/images/G.png" alt="Gerardo Aguilar" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
                         </div>
                         <div class="team-info">
                             <h3>Gerardo Aguilar</h3>

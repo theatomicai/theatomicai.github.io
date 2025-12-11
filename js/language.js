@@ -8,14 +8,20 @@
             'header.title': 'Atomic AI',
             'header.subtitle': 'Transforming businesses, one atomic innovation at a time.',
             'header.button': 'Find Out More',
+            'nav.home': 'Home',
             'nav.about': 'About',
-            'nav.who-we-are': 'Who We Are',
+            'nav.who-we-are': 'Team',
             'nav.services': 'Services',
             'nav.projects': 'Projects',
             'nav.contact': 'Contact',
+            'about.label': 'Innovation',
+            'about.subtitle': 'Transforming businesses through intelligent innovation',
             'about.title': 'AI Solutions Built for You',
             'about.description': 'At Atomic AI, our vision is to empower businesses and organizations to harness the full potential of artificial intelligence. We go beyond one-size-fits-all solutions, crafting bespoke AI systems that seamlessly integrate state-of-the-art generative models with traditional machine learning. Our approach is not just about innovation—it\'s about delivering scalable, reliable, and tailored AI solutions that drive real impact. With Atomic AI, you don\'t just adopt AI—you unlock its true power to transform your business.',
             'about.button': 'Reach out!',
+            'about.partnerships.title': 'Our Partnerships',
+            'about.partnerships.description': 'We work in collaboration with leading organizations on innovation and development projects in Latin America.',
+            'about.partnerships.note': 'We collaborate on innovation and technological development projects in Latin America.',
             'who-we-are.title': 'Who We Are',
             'who-we-are.description1': 'Atomic AI is a technology company dedicated to empowering organizations through intelligent, human-centered innovation. We design, build, and deploy advanced AI systems that enhance decision-making, transform operations, and help organizations grow with confidence.',
             'who-we-are.description2': 'Founded in El Salvador as a Sociedad por Acciones Simplificada, our purpose is rooted in innovation, value generation, and the development of solutions that strengthen the competitiveness of our clients and the digital ecosystem of the region.',
@@ -53,6 +59,7 @@
             'services.view-all': 'View All Services',
             'services.get-started': 'Get Started',
             'services.what-we-offer': 'What We Offer:',
+            'services.title-badge': 'What We Offer',
             'services.page-title': 'Our Services',
             'services.page-intro': 'We design, build, and deploy advanced AI solutions that transform how businesses operate. From custom AI development to data engineering and training programs, we provide end-to-end services tailored to your needs.',
             'services.custom-ai.title': 'Custom AI Development',
@@ -152,20 +159,37 @@
             'contact.info.response.title': 'Response Time',
             'contact.info.response.value': 'We typically respond within 24-48 hours',
             'contact.info.location.title': 'Location',
-            'contact.info.location.value': 'El Salvador, Central America'
+            'contact.info.location.value': 'El Salvador, Central America',
+            'footer.tagline': 'Transforming businesses, one atomic innovation at a time.',
+            'footer.explore': 'Explore',
+            'footer.company': 'Company',
+            'footer.team': 'Our Team',
+            'footer.mission': 'Mission & Vision',
+            'footer.connect': 'Connect',
+            'footer.rights': 'All rights reserved.',
+            'footer.privacy': 'Privacy Policy',
+            'footer.terms': 'Terms of Use',
+            'who-we-are.label': 'About Us',
+            'who-we-are.subtitle': 'Empowering organizations through intelligent innovation'
         },
         es: {
             'header.title': 'Atomic AI',
             'header.subtitle': 'Transformando negocios, una innovación atómica a la vez.',
             'header.button': 'Saber Más',
+            'nav.home': 'Inicio',
             'nav.about': 'Acerca de',
-            'nav.who-we-are': 'Quiénes Somos',
+            'nav.who-we-are': 'Equipo',
             'nav.services': 'Servicios',
             'nav.projects': 'Proyectos',
             'nav.contact': 'Contacto',
+            'about.label': 'Innovación',
+            'about.subtitle': 'Transformando negocios a través de innovación inteligente',
             'about.title': 'Soluciones de IA Hechas para Ti',
             'about.description': 'En Atomic AI, nuestra visión es empoderar a empresas y organizaciones para aprovechar todo el potencial de la inteligencia artificial. Vamos más allá de soluciones genéricas, creando sistemas de IA personalizados que integran perfectamente modelos generativos de última generación con aprendizaje automático tradicional. Nuestro enfoque no se trata solo de innovación—se trata de entregar soluciones de IA escalables, confiables y personalizadas que generen un impacto real. Con Atomic AI, no solo adoptas IA—desbloqueas su verdadero poder para transformar tu negocio.',
             'about.button': '¡Contáctanos!',
+            'about.partnerships.title': 'Nuestras Colaboraciones',
+            'about.partnerships.description': 'Trabajamos en colaboración con organizaciones líderes en proyectos de innovación y desarrollo en Latinoamérica.',
+            'about.partnerships.note': 'Colaboramos en proyectos de innovación y desarrollo tecnológico en Latinoamérica.',
             'who-we-are.title': 'Quiénes Somos',
             'who-we-are.description1': 'Atomic AI es una empresa tecnológica dedicada a empoderar organizaciones a través de innovación inteligente centrada en las personas. Diseñamos, construimos e implementamos sistemas avanzados de IA que mejoran la toma de decisiones, transforman operaciones y ayudan a las organizaciones a crecer con confianza.',
             'who-we-are.description2': 'Fundada en El Salvador como una Sociedad por Acciones Simplificada, nuestro propósito está arraigado en la innovación, la generación de valor y el desarrollo de soluciones que fortalecen la competitividad de nuestros clientes y el ecosistema digital de la región.',
@@ -203,6 +227,7 @@
             'services.view-all': 'Ver Todos los Servicios',
             'services.get-started': 'Comenzar',
             'services.what-we-offer': 'Lo que Ofrecemos:',
+            'services.title-badge': 'Lo que Ofrecemos',
             'services.page-title': 'Nuestros Servicios',
             'services.page-intro': 'Diseñamos, construimos e implementamos soluciones avanzadas de IA que transforman la forma en que operan las empresas. Desde desarrollo de IA personalizado hasta ingeniería de datos y programas de capacitación, proporcionamos servicios integrales adaptados a tus necesidades.',
             'services.custom-ai.title': 'Desarrollo de IA Personalizado',
@@ -302,20 +327,37 @@
             'contact.info.response.title': 'Tiempo de Respuesta',
             'contact.info.response.value': 'Normalmente respondemos en 24-48 horas',
             'contact.info.location.title': 'Ubicación',
-            'contact.info.location.value': 'El Salvador, Centroamérica'
+            'contact.info.location.value': 'El Salvador, Centroamérica',
+            'footer.tagline': 'Transformando negocios, una innovación atómica a la vez.',
+            'footer.explore': 'Explorar',
+            'footer.company': 'Empresa',
+            'footer.team': 'Nuestro Equipo',
+            'footer.mission': 'Misión y Visión',
+            'footer.connect': 'Conectar',
+            'footer.rights': 'Todos los derechos reservados.',
+            'footer.privacy': 'Política de Privacidad',
+            'footer.terms': 'Términos de Uso',
+            'who-we-are.label': 'Acerca de Nosotros',
+            'who-we-are.subtitle': 'Empoderando organizaciones a través de innovación inteligente'
         },
         fr: {
             'header.title': 'Atomic AI',
             'header.subtitle': 'Transformer les entreprises, une innovation atomique à la fois.',
             'header.button': 'En Savoir Plus',
+            'nav.home': 'Accueil',
             'nav.about': 'À Propos',
-            'nav.who-we-are': 'Qui Nous Sommes',
+            'nav.who-we-are': 'Équipe',
             'nav.services': 'Services',
             'nav.projects': 'Projets',
             'nav.contact': 'Contact',
+            'about.label': 'Innovation',
+            'about.subtitle': 'Transformer les entreprises grâce à l\'innovation intelligente',
             'about.title': 'Solutions IA Conçues pour Vous',
             'about.description': 'Chez Atomic AI, notre vision est d\'autonomiser les entreprises et les organisations pour exploiter tout le potentiel de l\'intelligence artificielle. Nous allons au-delà des solutions universelles, créant des systèmes IA sur mesure qui intègrent parfaitement les modèles génératifs de pointe avec l\'apprentissage automatique traditionnel. Notre approche ne se limite pas à l\'innovation—il s\'agit de fournir des solutions IA évolutives, fiables et personnalisées qui génèrent un impact réel. Avec Atomic AI, vous n\'adoptez pas seulement l\'IA—vous débloquez son véritable pouvoir pour transformer votre entreprise.',
             'about.button': 'Contactez-nous!',
+            'about.partnerships.title': 'Nos Partenariats',
+            'about.partnerships.description': 'Nous travaillons en collaboration avec des organisations de premier plan sur des projets d\'innovation et de développement en Amérique latine.',
+            'about.partnerships.note': 'Nous collaborons sur des projets d\'innovation et de développement technologique en Amérique latine.',
             'who-we-are.title': 'Qui Nous Sommes',
             'who-we-are.description1': 'Atomic AI est une entreprise technologique dédiée à l\'autonomisation des organisations grâce à une innovation intelligente centrée sur l\'humain. Nous concevons, construisons et déployons des systèmes IA avancés qui améliorent la prise de décision, transforment les opérations et aident les organisations à croître en toute confiance.',
             'who-we-are.description2': 'Fondée au Salvador en tant que Sociedad por Acciones Simplificada, notre objectif est ancré dans l\'innovation, la génération de valeur et le développement de solutions qui renforcent la compétitivité de nos clients et l\'écosystème numérique de la région.',
@@ -353,6 +395,7 @@
             'services.view-all': 'Voir Tous les Services',
             'services.get-started': 'Commencer',
             'services.what-we-offer': 'Ce que Nous Offrons:',
+            'services.title-badge': 'Ce que Nous Offrons',
             'services.page-title': 'Nos Services',
             'services.page-intro': 'Nous concevons, construisons et déployons des solutions IA avancées qui transforment la façon dont les entreprises fonctionnent. Du développement IA personnalisé à l\'ingénierie des données et aux programmes de formation, nous fournissons des services complets adaptés à vos besoins.',
             'services.custom-ai.title': 'Développement IA Personnalisé',
@@ -452,7 +495,18 @@
             'contact.info.response.title': 'Délai de Réponse',
             'contact.info.response.value': 'Nous répondons généralement dans les 24-48 heures',
             'contact.info.location.title': 'Localisation',
-            'contact.info.location.value': 'El Salvador, Amérique Centrale'
+            'contact.info.location.value': 'El Salvador, Amérique Centrale',
+            'footer.tagline': 'Transformer les entreprises, une innovation atomique à la fois.',
+            'footer.explore': 'Explorer',
+            'footer.company': 'Entreprise',
+            'footer.team': 'Notre Équipe',
+            'footer.mission': 'Mission et Vision',
+            'footer.connect': 'Se Connecter',
+            'footer.rights': 'Tous droits réservés.',
+            'footer.privacy': 'Politique de Confidentialité',
+            'footer.terms': 'Conditions d\'Utilisation',
+            'who-we-are.label': 'À Propos de Nous',
+            'who-we-are.subtitle': 'Autonomiser les organisations grâce à l\'innovation intelligente'
         }
     };
 
@@ -533,23 +587,44 @@
 
     // Language selector functionality
     function initLanguageSelector() {
+        // Try to find the language selector - could be in brand-container or navbar
         const langBtn = document.getElementById('langBtn');
         const langDropdown = document.getElementById('langDropdown');
+        const langSelector = document.querySelector('.language-selector, .brand-lang-selector');
         const langOptions = document.querySelectorAll('.lang-option');
 
-        if (!langBtn || !langDropdown) return;
+        if (!langBtn || !langDropdown || !langSelector) return;
 
-        // Toggle dropdown
+        // Toggle dropdown - prevent default and stop propagation
         langBtn.addEventListener('click', function(e) {
+            e.preventDefault();
             e.stopPropagation();
-            langDropdown.classList.toggle('show');
+            e.stopImmediatePropagation();
+            
+            // Toggle show class
+            const isShowing = langDropdown.classList.contains('show');
+            if (isShowing) {
+                langDropdown.classList.remove('show');
+            } else {
+                // Close any other open dropdowns first
+                document.querySelectorAll('.lang-dropdown.show').forEach(function(dropdown) {
+                    dropdown.classList.remove('show');
+                });
+                langDropdown.classList.add('show');
+            }
         });
 
         // Close dropdown when clicking outside
         document.addEventListener('click', function(e) {
-            if (!langBtn.contains(e.target) && !langDropdown.contains(e.target)) {
+            // Check if click is outside both button and dropdown
+            if (langSelector && !langSelector.contains(e.target)) {
                 langDropdown.classList.remove('show');
             }
+        });
+
+        // Prevent dropdown from closing when clicking inside it
+        langDropdown.addEventListener('click', function(e) {
+            e.stopPropagation();
         });
 
         // Handle language selection

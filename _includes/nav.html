@@ -33,38 +33,39 @@
                         Atomic AI
                     </a>
                 {% endif %}
+                <div class="language-selector brand-lang-selector">
+                    <button class="lang-btn" id="langBtn" aria-label="Select Language">
+                        <span class="lang-current" id="currentLang">EN</span>
+                    </button>
+                    <div class="lang-dropdown" id="langDropdown">
+                        <a href="#" class="lang-option" data-lang="en">
+                            <span class="lang-flag">🇬🇧</span>
+                            <span>English</span>
+                        </a>
+                        <a href="#" class="lang-option" data-lang="es">
+                            <span class="lang-flag">🇪🇸</span>
+                            <span>Español</span>
+                        </a>
+                        <a href="#" class="lang-option" data-lang="fr">
+                            <span class="lang-flag">🇫🇷</span>
+                            <span>Français</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li class="language-nav-item">
-                    <div class="language-selector">
-                        <button class="lang-btn" id="langBtn" aria-label="Select Language">
-                            <span class="lang-current" id="currentLang">EN</span>
-                        </button>
-                        <div class="lang-dropdown" id="langDropdown">
-                            <a href="#" class="lang-option" data-lang="en">
-                                <span class="lang-flag">🇬🇧</span>
-                                <span>English</span>
-                            </a>
-                            <a href="#" class="lang-option" data-lang="es">
-                                <span class="lang-flag">🇪🇸</span>
-                                <span>Español</span>
-                            </a>
-                            <a href="#" class="lang-option" data-lang="fr">
-                                <span class="lang-flag">🇫🇷</span>
-                                <span>Français</span>
-                            </a>
-                        </div>
-                    </div>
+                <li>
+                    <a href="/" data-translate="nav.home">Home</a>
                 </li>
                 <li>
                     <a href="/about" data-translate="nav.about">About</a>
                 </li>
                 <li>
-                    <a href="/who-we-are" data-translate="nav.who-we-are">Who We Are</a>
+                    <a href="/team" data-translate="nav.who-we-are">Team</a>
                 </li>
                 <li>
                     <a href="/services" data-translate="nav.services">Services</a>

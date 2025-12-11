@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About - AI Solutions Built for You
-permalink: /about/
+permalink: /about
 ---
 
 <section id="about" class="about-modern" style="padding: 100px 0; margin-top: 0 !important; padding-top: 100px !important;">
@@ -47,6 +47,31 @@ permalink: /about/
                         <p>Enterprise-grade quality</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Partnerships Section -->
+<section id="partnerships" class="partnerships-section" style="padding: 80px 0; background: #f8f9fa;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h3 style="font-size: 2rem; font-weight: 700; color: #0A284B; margin-bottom: 15px;" data-translate="about.partnerships.title">Our Partnerships</h3>
+                <p style="font-size: 18px; color: #555; margin-bottom: 50px; max-width: 800px; margin-left: auto; margin-right: auto;" data-translate="about.partnerships.description">
+                    We work in collaboration with leading organizations on innovation and development projects in Latin America.
+                </p>
+                <div class="partnerships-logos" style="display: flex; justify-content: center; align-items: center; gap: 60px; flex-wrap: wrap;">
+                    <div class="partnership-logo-item" style="text-align: center;">
+                        <img src="/assets/projects/mia/images/ccit.png" alt="CCIT" style="max-width: 200px; height: auto; filter: grayscale(0%); transition: all 0.3s ease;">
+                    </div>
+                    <div class="partnership-logo-item" style="text-align: center;">
+                        <img src="/assets/projects/mia/images/actemp.png" alt="OIT" style="max-width: 200px; height: auto; filter: grayscale(0%); transition: all 0.3s ease;">
+                    </div>
+                </div>
+                <p style="font-size: 16px; color: #666; margin-top: 40px; font-style: italic;" data-translate="about.partnerships.note">
+                    We collaborate on innovation and technological development projects in Latin America.
+                </p>
             </div>
         </div>
     </div>

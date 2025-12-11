@@ -1,17 +1,64 @@
 ---
 layout: page
 title: Our Services
-permalink: /services/
+permalink: /services
 ---
 
-<section id="services-hero" style="padding-top: 80px !important; padding-bottom: 80px; margin-top: 0 !important; background: linear-gradient(135deg, #0A284B 0%, #1a4a7a 100%); color: white;">
+<section id="services-hero" class="services-hero-section">
+    <div class="services-hero-background"></div>
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
-                <h1 class="section-heading" style="color: white; font-size: 3.5rem; margin-bottom: 30px;" data-translate="services.page-title">Our Services</h1>
-                <p style="font-size: 20px; line-height: 1.8; color: rgba(255,255,255,0.9); max-width: 800px; margin: 0 auto;" data-translate="services.page-intro">
-                    We design, build, and deploy advanced AI solutions that transform how businesses operate. From custom AI development to data engineering and training programs, we provide end-to-end services tailored to your needs.
-                </p>
+                <div class="services-hero-content">
+                    <h1 class="services-hero-title">
+                        <span class="services-title-badge" data-translate="services.title-badge">What We Offer</span>
+                        <span class="services-title-main" data-translate="services.page-title">Our Services</span>
+                        <span class="services-title-accent"></span>
+                    </h1>
+                    <div class="services-hero-divider">
+                        <div class="divider-line"></div>
+                        <div class="divider-icon">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                        <div class="divider-line"></div>
+                    </div>
+                    <p class="services-hero-description" data-translate="services.page-intro">
+                        We design, build, and deploy advanced AI solutions that transform how businesses operate. From <span class="highlight-text">custom AI development</span> to <span class="highlight-text">data engineering</span> and <span class="highlight-accent">training programs</span>, we provide end-to-end services tailored to your needs.
+                    </p>
+                    <div class="services-hero-icons">
+                        <div class="service-icon-item">
+                            <div class="service-icon-wrapper">
+                                <span style="color: white; font-weight: bold;">AI</span>
+                                <i class="fa fa-robot"></i>
+                            </div>
+                            <span class="service-icon-label">AI Development</span>
+                        </div>
+                        <div class="service-icon-item">
+                            <div class="service-icon-wrapper">
+                                <i class="fa fa-database"></i>
+                            </div>
+                            <span class="service-icon-label">Data Engineering</span>
+                        </div>
+                        <div class="service-icon-item">
+                            <div class="service-icon-wrapper">
+                                <i class="fa fa-line-chart"></i>
+                            </div>
+                            <span class="service-icon-label">Analytics</span>
+                        </div>
+                        <div class="service-icon-item">
+                            <div class="service-icon-wrapper">
+                                <i class="fa fa-laptop"></i>
+                            </div>
+                            <span class="service-icon-label">Software</span>
+                        </div>
+                        <div class="service-icon-item">
+                            <div class="service-icon-wrapper">
+                                <i class="fa fa-graduation-cap"></i>
+                            </div>
+                            <span class="service-icon-label">Training</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -23,7 +70,7 @@ permalink: /services/
         <div class="row">
             <div class="col-lg-5">
                 <div style="background: linear-gradient(135deg, rgba(10,40,75,0.1) 0%, rgba(14,165,163,0.1) 100%); padding: 60px 40px; border-radius: 20px; height: 100%; display: flex; align-items: center; justify-content: center;">
-                    <i class="fa fa-5x fa-cogs text-primary"></i>
+                    <img src="/assets/projects/mia/images/custom.jpeg" alt="Custom AI Development" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
                 </div>
             </div>
             <div class="col-lg-7">
@@ -96,7 +143,7 @@ permalink: /services/
             </div>
             <div class="col-lg-5">
                 <div style="background: linear-gradient(135deg, rgba(10,40,75,0.1) 0%, rgba(14,165,163,0.1) 100%); padding: 60px 40px; border-radius: 20px; height: 100%; display: flex; align-items: center; justify-content: center;">
-                    <i class="fa fa-5x fa-database text-primary"></i>
+                    <img src="/assets/projects/mia/images/etl.png" alt="ETL & Data Engineering" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
                 </div>
             </div>
         </div>
@@ -109,7 +156,7 @@ permalink: /services/
         <div class="row">
             <div class="col-lg-5">
                 <div style="background: linear-gradient(135deg, rgba(10,40,75,0.1) 0%, rgba(14,165,163,0.1) 100%); padding: 60px 40px; border-radius: 20px; height: 100%; display: flex; align-items: center; justify-content: center;">
-                    <i class="fa fa-5x fa-line-chart text-primary"></i>
+                    <img src="/assets/projects/mia/images/Dash2.jpeg" alt="Dashboards & Analytics" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
                 </div>
             </div>
             <div class="col-lg-7">
@@ -182,7 +229,7 @@ permalink: /services/
             </div>
             <div class="col-lg-5">
                 <div style="background: linear-gradient(135deg, rgba(10,40,75,0.1) 0%, rgba(14,165,163,0.1) 100%); padding: 60px 40px; border-radius: 20px; height: 100%; display: flex; align-items: center; justify-content: center;">
-                    <i class="fa fa-5x fa-laptop text-primary"></i>
+                    <img src="/assets/projects/mia/images/Dash1.jpeg" alt="Custom Software Solutions" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
                 </div>
             </div>
         </div>
@@ -195,7 +242,7 @@ permalink: /services/
         <div class="row">
             <div class="col-lg-5">
                 <div style="background: linear-gradient(135deg, rgba(10,40,75,0.1) 0%, rgba(14,165,163,0.1) 100%); padding: 60px 40px; border-radius: 20px; height: 100%; display: flex; align-items: center; justify-content: center;">
-                    <i class="fa fa-5x fa-graduation-cap text-primary"></i>
+                    <img src="/assets/projects/mia/images/C.jpg" alt="Training & AI Literacy" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
                 </div>
             </div>
             <div class="col-lg-7">
@@ -233,6 +280,7 @@ permalink: /services/
 </section>
 
 <style>
+/* Services Page Responsive Styles */
 @media (max-width: 991px) {
     #custom-ai .col-lg-5,
     #dashboards .col-lg-5,
@@ -249,6 +297,64 @@ permalink: /services/
     #software .col-lg-7 > div {
         padding-left: 0 !important;
         padding-right: 0 !important;
+    }
+}
+
+@media (max-width: 767px) {
+    #services-hero {
+        padding: 60px 0 50px !important;
+        
+        h1 {
+            font-size: clamp(2rem, 8vw, 2.5rem) !important;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            font-size: clamp(1rem, 4vw, 1.15rem) !important;
+            line-height: 1.65;
+            padding: 0 15px;
+        }
+    }
+    
+    #custom-ai,
+    #etl,
+    #dashboards,
+    #software,
+    #training {
+        padding: 50px 0 !important;
+        
+        .row {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+        
+        .col-lg-5,
+        .col-lg-7 {
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            font-size: clamp(1.75rem, 7vw, 2.2rem) !important;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            font-size: clamp(0.95rem, 3.8vw, 1.05rem) !important;
+            line-height: 1.65;
+            margin-bottom: 20px;
+        }
+        
+        ul {
+            padding-left: 20px;
+            
+            li {
+                font-size: clamp(0.95rem, 3.8vw, 1.05rem) !important;
+                line-height: 1.65;
+                margin-bottom: 12px;
+            }
+        }
     }
 }
 </style>
