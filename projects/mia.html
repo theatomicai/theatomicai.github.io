@@ -2,10 +2,23 @@
 permalink: /mia
 layout: null
 ---
+<!DOCTYPE html>
+<html lang="es">
+<head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Mia — Mentora de Negocios en WhatsApp (Honduras)</title>
 <meta name="description" content="Mia es una mentora 24/7 en WhatsApp que ayuda a microempresarios y microempresarias a mejorar marketing, precios, finanzas y más — basada en SIYB de la OIT." />
+
+<!-- Bootstrap Core CSS -->
+<link rel="stylesheet" href="{{ '/css/bootstrap.min.css' | relative_url }}" type="text/css">
+<!-- Custom Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="{{ '/font-awesome/css/font-awesome.min.css' | relative_url }}" type="text/css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}" type="text/css">
+
 <style>
   /* ----- Reset (scoped) ----- */
   *, *::before, *::after { box-sizing: border-box; }
@@ -160,7 +173,7 @@ layout: null
 
   .footer-logos img {
     display: block;
-    <!-- height: clamp(22px, 2.8vw, 38px);  /* controla la altura visual */ -->
+    /* height: clamp(22px, 2.8vw, 38px);  controla la altura visual */
     height: 8rem;  /* controla la altura visual */
     max-width: 220px;
     width: auto;
@@ -197,9 +210,16 @@ layout: null
   .footer-logos img{ height:5rem; max-width:12rem; object-fit:contain; }
   .footer-logos img.actemp{ height:7rem; max-width:20rem; } /* ACT/EMP más grande */
 
-</style>
+  /* Navbar styles for MIA page */
+  #mainNav {
+    z-index: 1000;
+  }
 
-<body>
+</style>
+</head>
+
+<body id="page-top">
+  {% include nav.html %}
   <!-- HERO -->
   <header class="hero">
     <div class="wrap hero-grid">
@@ -312,6 +332,8 @@ layout: null
             <span class="caption">Propone pasos cortos, prácticos y medibles que impulsan el progreso real.</span>
         </div>
         </div>
+    </div>
+  </section>
 
   <!-- GALERÍA: CAPTURAS WHATSAPP (5) -->
   <section class="section">
@@ -418,3 +440,29 @@ layout: null
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
+
+  <!-- Atomic AI Footer -->
+  {% include footer.html %}
+
+  <!-- Scripts -->
+  <!-- jQuery -->
+  <script src="{{ '/js/jquery.js' | relative_url }}"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script src="{{ '/js/bootstrap.min.js' | relative_url }}"></script>
+  <!-- Plugin JavaScript -->
+  <script src="{{ '/js/jquery.easing.min.js' | relative_url }}"></script>
+  <script src="{{ '/js/jquery.fittext.js' | relative_url }}"></script>
+  <script src="{{ '/js/wow.min.js' | relative_url }}"></script>
+  <!-- Custom Theme JavaScript -->
+  <script src="{{ '/js/creative.js' | relative_url }}"></script>
+  <script src="{{ '/js/banner.js' | relative_url }}"></script>
+  <script src="{{ '/js/language.js' | relative_url }}"></script>
+  
+  <script>
+    // Force navbar to have white background on MIA page
+    $(document).ready(function() {
+      $('#mainNav').addClass('affix');
+    });
+  </script>
+</body>
+</html>

@@ -1,4 +1,10 @@
-<section id="about" class="about-modern">
+---
+layout: page
+title: About - AI Solutions Built for You
+permalink: /about/
+---
+
+<section id="about" class="about-modern" style="padding: 100px 0; margin-top: 0 !important; padding-top: 100px !important;">
     <div class="container">
         <div class="about-content">
             <div class="about-text-wrapper">
@@ -45,3 +51,4 @@
         </div>
     </div>
 </section>
+

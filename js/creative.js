@@ -10,10 +10,19 @@
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: ($($anchor.attr('href')).offset().top - 50)
-        }, 1250, 'easeInOutExpo');
-        event.preventDefault();
+        var href = $anchor.attr('href');
+        
+        // Only do smooth scroll if it's an anchor link on the same page
+        if (href && href.indexOf('#') === 0 && href.length > 1) {
+            var target = $(href);
+            if (target.length) {
+                $('html, body').stop().animate({
+                    scrollTop: (target.offset().top - 50)
+                }, 1250, 'easeInOutExpo');
+                event.preventDefault();
+            }
+        }
+        // If it's not an anchor link (e.g., /projects), let the browser handle it normally
     });
 
     // Highlight the top nav as scrolling occurs
@@ -35,12 +44,17 @@
         }
     );
 
-    // Offset for Main Navigation
-    $('#mainNav').affix({
-        offset: {
-            top: 100
-        }
-    })
+    // Offset for Main Navigation - only on pages with hero header
+    if ($('body').hasClass('has-hero-header')) {
+        $('#mainNav').affix({
+            offset: {
+                top: 100
+            }
+        });
+    } else {
+        // For pages without hero header, always show navbar with white background
+        $('#mainNav').addClass('affix');
+    }
 
     // Initialize WOW.js Scrolling Animations
     new WOW().init();

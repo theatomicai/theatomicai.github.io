@@ -1,5 +1,16 @@
 <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
+    <!-- Video background for navbar -->
+    <video id="navbar-video"
+           class="navbar-video-background"
+           autoplay
+           muted
+           loop
+           playsinline
+           webkit-playsinline
+           preload="auto">
+        <source src="{{ '/assets/video/hero-pingpong-mobile.mp4' | relative_url }}" type="video/mp4">
+    </video>
+    <div class="container-fluid navbar-content-wrapper">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -10,29 +21,63 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" href="#page-top">
-                Atomic AI
-            </a>
+            <div class="brand-container">
+                {% if page.url == '/' or page.url == '/index.html' or page.layout == 'front' %}
+                    <a class="navbar-brand page-scroll" href="#page-top">
+                        <img src="{{ '/assets/projects/mia/images/logoAtomic3.png' | relative_url }}" alt="Atomic AI Logo" class="navbar-logo">
+                        Atomic AI
+                    </a>
+                {% else %}
+                    <a class="navbar-brand" href="{{ '/' | relative_url }}">
+                        <img src="{{ '/assets/projects/mia/images/logoAtomic3.png' | relative_url }}" alt="Atomic AI Logo" class="navbar-logo">
+                        Atomic AI
+                    </a>
+                {% endif %}
+            </div>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a class="page-scroll" href="#about">About</a>
+                <li class="language-nav-item">
+                    <div class="language-selector">
+                        <button class="lang-btn" id="langBtn" aria-label="Select Language">
+                            <span class="lang-current" id="currentLang">EN</span>
+                        </button>
+                        <div class="lang-dropdown" id="langDropdown">
+                            <a href="#" class="lang-option" data-lang="en">
+                                <span class="lang-flag">🇬🇧</span>
+                                <span>English</span>
+                            </a>
+                            <a href="#" class="lang-option" data-lang="es">
+                                <span class="lang-flag">🇪🇸</span>
+                                <span>Español</span>
+                            </a>
+                            <a href="#" class="lang-option" data-lang="fr">
+                                <span class="lang-flag">🇫🇷</span>
+                                <span>Français</span>
+                            </a>
+                        </div>
+                    </div>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#services">Services</a>
+                    <a href="/about" data-translate="nav.about">About</a>
                 </li>
-                <!-- <li>
-                    <a class="page-scroll" href="#portfolio">Portfolio</a>
-                </li> -->
                 <li>
-                    <a class="page-scroll" href="#contact">Contact</a>
+                    <a href="/who-we-are" data-translate="nav.who-we-are">Who We Are</a>
+                </li>
+                <li>
+                    <a href="/services" data-translate="nav.services">Services</a>
+                </li>
+                <li>
+                    <a href="/projects" data-translate="nav.projects">Projects</a>
+                </li>
+                <li>
+                    <a href="/contact" data-translate="nav.contact">Contact</a>
                 </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
     </div>
-    <!-- /.container-fluid -->
+    <!-- /.container-fluid /.navbar-content-wrapper -->
 </nav>

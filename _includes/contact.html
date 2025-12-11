@@ -1,17 +1,28 @@
-<section id="contact" class="bg-primary">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h2 class="section-heading">Let's Get In Touch!</h2>
-                <hr class="primary">
-                <p>Ready to start your next project with us? Send us an email with your inquiry!</p>
+<section id="contact" class="bg-primary" style="padding: 100px 0;">
+    <div class="container text-center">
+        <div class="contact-cta-section">
+            <div class="contact-cta-icon">
+                <i class="fa fa-envelope-o fa-4x wow bounceIn" style="color: white;" data-wow-delay=".1s"></i>
             </div>
-            <div class="col-lg-2 col-lg-offset-5 text-center">
-                <a href="mailto:{{ site.email }}">
-                    <i class="fa fa-envelope-o fa-3x wow bounceIn" style="color: white;" data-wow-delay=".1s"></i>
-                    <p style="color: white;" >{{ site.email }}</p>
+            <h2 class="section-heading" data-translate="contact.title" style="color: white; margin-top: 30px;">Let's Get In Touch</h2>
+            <hr class="light" style="max-width: 80px; margin: 25px auto;">
+            <p class="text-faded" data-translate="contact.description" style="font-size: 18px; line-height: 1.8; max-width: 700px; margin: 0 auto 40px;">
+                Ready to explore how AI can transform your operations?  
+                Send us a message and let's build the future together.
+            </p>
+            <div class="contact-cta-buttons" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="/contact" class="btn btn-default btn-xl" data-translate="contact.cta.button" style="background: white; color: #0A284B; border: none; padding: 18px 40px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease;">
+                    <i class="fa fa-paper-plane" style="margin-right: 10px;"></i>
+                    Send Us a Message
+                </a>
+                <a href="mailto:{{ site.email }}" class="btn btn-default btn-xl" style="background: transparent; color: white; border: 2px solid white; padding: 18px 40px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease;">
+                    <i class="fa fa-envelope-o" style="margin-right: 10px;"></i>
+                    {{ site.email }}
                 </a>
             </div>
+            <p class="text-faded" style="margin-top: 40px; font-size: 14px; opacity: 0.8;" data-translate="contact.cta.note">
+                We typically respond within 24-48 hours
+            </p>
         </div>
     </div>
 </section>
