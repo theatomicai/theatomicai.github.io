@@ -1,33 +1,44 @@
 <div class="apple-home">
-  <section class="apple-section apple-trust">
-    <div class="apple-shell">
-      <p class="apple-eyebrow">Trusted by teams building in the real world</p>
-      <div class="apple-logo-row">
-        <img src="{{ '/assets/projects/mia/images/ccit.png' | relative_url }}" alt="CCIT">
-        <img src="{{ '/assets/projects/mia/images/actemp.png' | relative_url }}" alt="ACTEMP">
-        <img src="{{ '/assets/projects/mia/images/LOGO POTENZA-04.png' | relative_url }}" alt="Potenza">
+  <section class="apple-section apple-trust trust-shell" aria-label="Trusted by teams">
+    <div class="trust-inner">
+      <header class="trust-header">
+        <p class="trust-eyebrow">Trusted by teams building in the real world</p>
+      </header>
+
+      <div class="trust-logos" role="list" aria-label="Logos">
+        <img src="{{ '/assets/projects/mia/images/ccit.png' | relative_url }}" alt="CCIT" class="trust-logo">
+        <img src="{{ '/assets/projects/mia/images/actemp.png' | relative_url }}" alt="ACTEMP" class="trust-logo">
+        <img src="{{ '/assets/projects/mia/images/LOGO POTENZA-04.png' | relative_url }}" alt="Potenza" class="trust-logo">
       </div>
 
-      <div class="apple-metrics-grid">
-        <article class="apple-metric-card">
-          <span class="apple-metric-value">90%</span>
-          <span class="apple-metric-label">User usefulness score</span>
-          <span class="apple-metric-tag">Verified</span>
+      <div class="trust-metrics" aria-label="Key metrics">
+        <article class="metric-card">
+          <div class="metric-top">
+            <span class="metric-value">90%</span>
+            <span class="metric-badge">Verified</span>
+          </div>
+          <p class="metric-label">User usefulness score</p>
         </article>
-        <article class="apple-metric-card">
-          <span class="apple-metric-value">50,000+</span>
-          <span class="apple-metric-label">Messages in 3 months</span>
-          <span class="apple-metric-tag">Verified</span>
+        <article class="metric-card">
+          <div class="metric-top">
+            <span class="metric-value">50,000+</span>
+            <span class="metric-badge">Verified</span>
+          </div>
+          <p class="metric-label">Messages in 3 months</p>
         </article>
-        <article class="apple-metric-card">
-          <span class="apple-metric-value">4,000+</span>
-          <span class="apple-metric-label">Voice notes processed</span>
-          <span class="apple-metric-tag">Verified</span>
+        <article class="metric-card">
+          <div class="metric-top">
+            <span class="metric-value">4,000+</span>
+            <span class="metric-badge">Verified</span>
+          </div>
+          <p class="metric-label">Voice notes processed</p>
         </article>
-        <article class="apple-metric-card">
-          <span class="apple-metric-value">2,000+</span>
-          <span class="apple-metric-label">Images processed</span>
-          <span class="apple-metric-tag">Verified</span>
+        <article class="metric-card">
+          <div class="metric-top">
+            <span class="metric-value">2,000+</span>
+            <span class="metric-badge">Verified</span>
+          </div>
+          <p class="metric-label">Images processed</p>
         </article>
       </div>
     </div>
