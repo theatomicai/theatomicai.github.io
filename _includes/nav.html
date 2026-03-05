@@ -23,23 +23,16 @@
                 <span class="icon-bar"></span>
             </button>
             <div class="brand-container">
-                {% if page.url == '/' or page.url == '/index.html' or page.layout == 'front' %}
-                    <a class="navbar-brand page-scroll" href="#page-top">
-                        <img src="{{ '/assets/projects/mia/images/logoAtomic3.png' | relative_url }}" alt="Atomic AI Logo" class="navbar-logo">
-                        Atomic AI
-                    </a>
-                {% else %}
-                    <a class="navbar-brand" href="{{ '/' | relative_url }}">
-                        <img src="{{ '/assets/projects/mia/images/logoAtomic3.png' | relative_url }}" alt="Atomic AI Logo" class="navbar-logo">
-                        Atomic AI
-                    </a>
-                {% endif %}
+                <a class="navbar-brand" href="{{ '/' | relative_url }}">
+                    <img src="{{ '/assets/projects/mia/images/logoAtomic3.png' | relative_url }}" alt="Atomic AI Logo" class="navbar-logo">
+                    Atomic AI
+                </a>
                 <div class="language-selector brand-lang-selector">
                     <button class="lang-btn" id="langBtn" aria-label="Select Language">
                         <span class="lang-current" id="currentLang">EN</span>
                     </button>
                     <div class="lang-dropdown" id="langDropdown">
-                        <a href="#" class="lang-option" data-lang="en">
+                        <a href="#" class="lang-option active" data-lang="en">
                             <span class="lang-flag">🇬🇧</span>
                             <span>English</span>
                         </a>

@@ -6303,10 +6303,9 @@ body.has-hero-header header .header-content {
     width: 100%;
     max-width: 960px;
     margin: 0 auto 14px;
-    border-radius: 999px;
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.26);
-    background: rgba(255, 255, 255, 0.12);
+    border: 0;
+    background: transparent;
 }
 
 .hero-marquee-track {
