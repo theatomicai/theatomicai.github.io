@@ -6300,9 +6300,12 @@ body.has-hero-header header .header-content {
 }
 
 .hero-marquee {
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto 14px;
+    width: 100vw;
+    max-width: none;
+    margin: 0 0 14px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     overflow: hidden;
     border: 0;
     background: transparent;
