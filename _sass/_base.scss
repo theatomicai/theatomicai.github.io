@@ -5292,11 +5292,15 @@ hr {
                 }
                 
                 .brand-lang-selector {
-                    margin-left: 6px;
+                    margin-left: 0;
                     display: flex;
                     align-items: center;
                     order: 2;
                     margin-right: 0;
+                    position: absolute;
+                    right: 52px;
+                    top: 50%;
+                    transform: translateY(-50%);
 
                     .lang-btn {
                         padding: 4px 8px !important;
