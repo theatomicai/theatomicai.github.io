@@ -7190,7 +7190,7 @@ body.has-hero-header header .header-content {
 }
 
 .apple-section {
-    padding: clamp(56px, 7vw, var(--ds-s7)) 0;
+    padding: 56px 0;
 }
 
 .apple-headline-block {
@@ -7244,7 +7244,7 @@ body.has-hero-header header .header-content {
 }
 
 .proof {
-    padding-top: clamp(34px, 5vw, 60px);
+    padding: 32px 0 48px;
 }
 
 .proof-title {
@@ -7258,28 +7258,30 @@ body.has-hero-header header .header-content {
 }
 
 .proof-row {
-    display: grid;
-    gap: var(--ds-s4);
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    gap: var(--ds-s4);
 }
 
 .proof-logos {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: var(--ds-s2);
+    gap: 16px;
     flex-wrap: wrap;
+    margin-bottom: 28px;
 }
 
 .proof-logos img {
     height: 32px;
     width: auto;
     max-width: 180px;
-    padding: 10px 14px;
-    border-radius: var(--ds-radius-sm);
-    background: var(--ds-surface-soft);
-    border: 1px solid var(--ds-border);
-    box-shadow: var(--ds-shadow-sm);
+    padding: 10px 18px;
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
     opacity: 0.92;
     object-fit: contain;
     transition: transform 0.18s ease, opacity 0.18s ease;
@@ -7294,10 +7296,12 @@ body.has-hero-header header .header-content {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: var(--ds-s2);
+    width: min(860px, 100%);
 }
 
 .proof-metric {
-    padding: var(--ds-s3);
+    padding: 20px;
+    min-height: 120px;
     border-radius: var(--ds-radius-md);
     background: var(--ds-surface);
     border: 1px solid var(--ds-border);
@@ -7306,11 +7310,11 @@ body.has-hero-header header .header-content {
 }
 
 .proof-metric .v {
-    font-size: 26px;
-    font-weight: 750;
+    font-size: 36px;
+    font-weight: 800;
     letter-spacing: -0.02em;
     color: var(--ds-text);
-    line-height: 1.1;
+    line-height: 1.05;
 }
 
 .proof-metric .l {
@@ -7347,10 +7351,6 @@ body.has-hero-header header .header-content {
 }
 
 @media (min-width: 900px) {
-    .proof-row {
-        grid-template-columns: 1.1fr 0.9fr;
-    }
-
     .proof-metrics {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
