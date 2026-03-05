@@ -5997,17 +5997,28 @@ hr {
 
 /* Navigation cleanup */
 #mainNav.navbar-default {
-    background: rgba(8, 30, 52, 0.9) !important;
+    background: #0a2746 !important;
     border: 0 !important;
     box-shadow: 0 8px 28px rgba(6, 20, 36, 0.2);
     backdrop-filter: blur(8px);
+    overflow: hidden;
 
     .navbar-video-background {
-        display: none !important;
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
     }
 
     .navbar-content-wrapper {
         min-height: 68px !important;
+        position: relative;
+        z-index: 2;
     }
 
     .navbar-brand,
@@ -6059,6 +6070,16 @@ body:not(.has-hero-header) #mainNav.navbar-default {
     background: #0a2746 !important;
 }
 
+body.has-hero-header #mainNav.navbar-default {
+    background: linear-gradient(180deg, rgba(6, 26, 47, 0.72), rgba(6, 26, 47, 0.32) 65%, rgba(6, 26, 47, 0.05)) !important;
+    box-shadow: none;
+    backdrop-filter: blur(2px);
+
+    .navbar-video-background {
+        opacity: 0.52;
+    }
+}
+
 /* Identity typography */
 body,
 .sales-section p,
@@ -6081,14 +6102,16 @@ body.has-hero-header header {
 
     .video-container {
         filter: saturate(1.08) contrast(1.03);
+        z-index: 0;
+        opacity: 1;
     }
 
     .header-content {
         padding: 118px 15px 84px;
         background:
-            radial-gradient(circle at 12% 10%, rgba(14, 165, 163, 0.28), transparent 42%),
-            radial-gradient(circle at 86% 78%, rgba(244, 161, 45, 0.25), transparent 44%),
-            linear-gradient(130deg, rgba(5, 18, 34, 0.84), rgba(9, 30, 52, 0.74));
+            radial-gradient(circle at 12% 10%, rgba(14, 165, 163, 0.22), transparent 42%),
+            radial-gradient(circle at 86% 78%, rgba(244, 161, 45, 0.18), transparent 44%),
+            linear-gradient(130deg, rgba(5, 18, 34, 0.72), rgba(9, 30, 52, 0.58));
     }
 
     .header-content-inner {
@@ -6631,6 +6654,38 @@ body.has-hero-header header .header-content {
     }
 }
 
+.sales-testimonials {
+    background: var(--id-white);
+}
+
+.testimonial-card {
+    border: 1px solid var(--id-border);
+    border-radius: 16px;
+    background: linear-gradient(135deg, #ffffff, #f8fbff);
+    box-shadow: var(--id-shadow);
+    padding: 22px;
+
+    p {
+        margin: 0 0 14px;
+        color: var(--id-ink);
+        font-size: 1.02rem;
+        line-height: 1.65;
+        font-weight: 500;
+    }
+
+    span {
+        display: inline-flex;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        font-weight: 700;
+        color: var(--id-navy-700);
+        background: rgba(49, 82, 122, 0.12);
+        border-radius: 999px;
+        padding: 5px 10px;
+    }
+}
+
 /* Video proof */
 .sales-video-proof {
     display: grid;
@@ -6912,7 +6967,8 @@ body.has-hero-header header .header-content {
     .sales-case-content,
     .sales-video-copy,
     .metric-card,
-    .claim-card {
+    .claim-card,
+    .testimonial-card {
         padding: 18px;
     }
 
