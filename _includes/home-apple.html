@@ -1,41 +1,45 @@
 <div class="apple-home">
   <section class="apple-section apple-trust proof" aria-label="Trusted by teams">
     <div class="apple-shell">
-      <p class="proof-title">Trusted by teams building in the real world</p>
+      <div class="proof-inner">
+        <p class="proof-title">Trusted by teams building in the real world</p>
 
-      <div class="proof-row">
-        <div class="proof-logos" role="list" aria-label="Logos">
-          <div class="proof-logo-badge">
-            <img src="{{ '/assets/projects/mia/images/ccit.png' | relative_url }}" alt="CCIT">
+        <div class="proof-row">
+          <div class="proof-logos" role="list" aria-label="Logos">
+            <div class="proof-logo-badge">
+              <img src="{{ '/assets/projects/mia/images/ccit.png' | relative_url }}" alt="CCIT">
+            </div>
+            <div class="proof-logo-badge">
+              <img src="{{ '/assets/projects/mia/images/actemp.png' | relative_url }}" alt="ACTEMP">
+            </div>
+            <div class="proof-logo-badge">
+              <img src="{{ '/assets/projects/mia/images/LOGO POTENZA-04.png' | relative_url }}" alt="Potenza">
+            </div>
           </div>
-          <div class="proof-logo-badge">
-            <img src="{{ '/assets/projects/mia/images/actemp.png' | relative_url }}" alt="ACTEMP">
-          </div>
-          <div class="proof-logo-badge">
-            <img src="{{ '/assets/projects/mia/images/LOGO POTENZA-04.png' | relative_url }}" alt="Potenza">
+
+          <div class="proof-metrics" aria-label="Key metrics">
+            <article class="proof-metric reveal delay1">
+              <div class="v">90%</div>
+              <div class="l">Usefulness score</div>
+            </article>
+            <article class="proof-metric reveal delay2">
+              <div class="v">50k+</div>
+              <div class="l">Messages in 3 months</div>
+            </article>
+            <article class="proof-metric reveal delay3">
+              <div class="v">6k+</div>
+              <div class="l">Voice notes and images processed</div>
+            </article>
           </div>
         </div>
 
-        <div class="proof-metrics" aria-label="Key metrics">
-          <article class="proof-metric reveal delay1">
-            <div class="v">90%</div>
-            <div class="l">Usefulness score</div>
-          </article>
-          <article class="proof-metric reveal delay2">
-            <div class="v">50k+</div>
-            <div class="l">Messages in 3 months</div>
-          </article>
-          <article class="proof-metric reveal delay3">
-            <div class="v">6k+</div>
-            <div class="l">Voice notes and images processed</div>
-          </article>
+        <div class="proof-note">
+          <span class="proof-badge">Verified</span>
+          <span>Numbers from production usage</span>
         </div>
       </div>
 
-      <div class="proof-note">
-        <span class="proof-badge">Verified</span>
-        <span>Numbers from production usage</span>
-      </div>
+      <div class="section-divider" aria-hidden="true"></div>
     </div>
   </section>
 
@@ -113,14 +117,26 @@
             <source src="{{ '/assets/projects/mia/videos/promoting-mia.mp4' | relative_url }}" type="video/mp4">
           </video>
         </div>
-        <div class="apple-feature-copy">
+        <div class="apple-feature-copy featured">
           <h3>Mia WhatsApp AI Assistant</h3>
           <p>Conversational guidance for entrepreneurs through text, voice, and image interactions.</p>
-          <ul>
-            <li>Verified: 90% user usefulness score</li>
-            <li>Verified: 50,000+ messages in three months</li>
-            <li>Verified: 4,000+ voice notes and 2,000+ images processed</li>
-          </ul>
+          <div class="feature-metrics">
+            <article class="feature-metric-card">
+              <span class="feature-metric-tag">Verified</span>
+              <span class="feature-metric-value">90%</span>
+              <span class="feature-metric-label">User usefulness score</span>
+            </article>
+            <article class="feature-metric-card">
+              <span class="feature-metric-tag">Verified</span>
+              <span class="feature-metric-value">50,000+</span>
+              <span class="feature-metric-label">Messages in three months</span>
+            </article>
+            <article class="feature-metric-card">
+              <span class="feature-metric-tag">Verified</span>
+              <span class="feature-metric-value">4,000+ / 2,000+</span>
+              <span class="feature-metric-label">Voice notes and images processed</span>
+            </article>
+          </div>
           <a href="{{ '/case-studies/mia' | relative_url }}" class="apple-link">Read case study <i class="fa fa-arrow-right"></i></a>
         </div>
       </article>
