@@ -44,7 +44,7 @@ permalink: /projects
         <article class="projects-card featured" data-category="llm">
           <a class="projects-card-link" href="{{ '/case-studies/mia' | relative_url }}">
             <div class="media">
-              <img src="{{ '/assets/projects/mia/images/mia.jpeg' | relative_url }}" alt="Mia case study" loading="lazy">
+              <img class="media-image media-image--portrait" src="{{ '/assets/projects/mia/images/mia-whatsapp.jpeg' | relative_url }}" alt="Mia case study" loading="lazy">
               <div class="tag-row">
                 <span class="tag tag-brand">Verified</span>
                 <span class="tag">WhatsApp</span>
@@ -67,7 +67,7 @@ permalink: /projects
         <article class="projects-card" data-category="analytics data">
           <a class="projects-card-link" href="{{ '/case-studies/potenza' | relative_url }}">
             <div class="media">
-              <img src="{{ '/assets/projects/mia/images/potenza.png' | relative_url }}" alt="Potenza case study" loading="lazy">
+              <img class="media-image" src="{{ '/assets/projects/mia/images/Dash2.jpeg' | relative_url }}" alt="Potenza dashboard case study" loading="lazy">
               <div class="tag-row">
                 <span class="tag">Production</span>
                 <span class="tag">Monitoring</span>
@@ -88,7 +88,7 @@ permalink: /projects
         <article class="projects-card" data-category="platforms">
           <a class="projects-card-link" href="{{ '/case-studies/custom-platforms' | relative_url }}">
             <div class="media">
-              <img src="{{ '/assets/projects/mia/images/ortodonciasv1.png' | relative_url }}" alt="Custom platforms case study" loading="lazy">
+              <img class="media-image" src="{{ '/assets/projects/mia/images/custom.jpeg' | relative_url }}" alt="Custom platforms case study" loading="lazy">
               <div class="tag-row">
                 <span class="tag">Enterprise</span>
                 <span class="tag">Security</span>
@@ -106,10 +106,10 @@ permalink: /projects
           </a>
         </article>
 
-        <article class="projects-card" data-category="data">
+        <article class="projects-card projects-card--logo" data-category="data">
           <a class="projects-card-link" href="{{ '/contact' | relative_url }}">
             <div class="media">
-              <img src="{{ '/assets/projects/mia/images/ITCILO_logo.png' | relative_url }}" alt="Just Transition Policy Gateway case study" loading="lazy">
+              <img class="media-image media-image--logo" src="{{ '/assets/projects/mia/images/ITCILO_logo.png' | relative_url }}" alt="Just Transition Policy Gateway case study" loading="lazy">
               <div class="tag-row">
                 <span class="tag">NLP</span>
                 <span class="tag">Docs</span>

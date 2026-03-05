@@ -8826,14 +8826,29 @@ body.has-hero-header header .header-content {
 }
 
 .projects-card.featured .media {
-  aspect-ratio: 21 / 9;
+  aspect-ratio: 16 / 10;
 }
 
 .projects-card .media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
+}
+
+.projects-card .media img.media-image--portrait {
+  object-position: center 30%;
+}
+
+.projects-card .media img.media-image--logo {
+  object-fit: contain;
+  padding: 22px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.97), rgba(244, 247, 252, 0.98));
+}
+
+.projects-card--logo .media {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(240, 246, 255, 0.92));
 }
 
 .projects-card .tag-row {
