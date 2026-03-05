@@ -25,6 +25,10 @@ permalink: /case-studies/custom-platforms
           <li>Secure roles, permissions, and audit readiness</li>
           <li>Scalable architecture for future modules</li>
         </ul>
+        <div class="hero-logos-row">
+          <img src="{{ '/assets/projects/mia/images/ortodonciasv1.png' | relative_url }}" alt="Client platform">
+          <img src="{{ '/assets/projects/mia/images/logoAtomic3.png' | relative_url }}" alt="Atomic AI">
+        </div>
       </div>
     </div>
 

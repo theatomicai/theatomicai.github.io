@@ -23,9 +23,25 @@ permalink: /case-studies/mia
         <ul class="sales-metrics">
           <li>90% of users reported Mia was useful</li>
           <li>50,000+ messages exchanged in 3 months</li>
-          <li>Thousands of voice notes and images processed</li>
+          <li>Multimodal interactions through text, voice, and images</li>
         </ul>
         <a href="{{ '/mia' | relative_url }}" class="sales-link">View original project page (Spanish) <i class="fa fa-external-link"></i></a>
+      </div>
+    </div>
+
+    <div class="sales-video-proof">
+      <div class="sales-video-wrap">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="{{ '/assets/projects/mia/videos/promoting-mia.mp4' | relative_url }}" type="video/mp4">
+        </video>
+      </div>
+      <div class="sales-video-copy">
+        <h3>Demo snapshot</h3>
+        <p>The assistant supports day-to-day business questions in WhatsApp using practical, step-by-step responses.</p>
+        <div class="hero-logos-row">
+          <img src="{{ '/assets/projects/mia/images/ccit.png' | relative_url }}" alt="CCIT">
+          <img src="{{ '/assets/projects/mia/images/actemp.png' | relative_url }}" alt="ACTEMP">
+        </div>
       </div>
     </div>
 
@@ -70,5 +86,6 @@ permalink: /case-studies/mia
     <div class="sales-center-cta">
       <a href="{{ '/contact' | relative_url }}" class="btn btn-primary btn-xl">Discuss a similar LLM assistant</a>
     </div>
+    <p class="sales-data-note">Data note: 90% usefulness and 50,000+ messages in three months come from the current Mia implementation report.</p>
   </div>
 </section>

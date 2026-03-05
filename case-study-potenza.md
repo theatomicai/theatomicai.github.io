@@ -25,6 +25,10 @@ permalink: /case-studies/potenza
           <li>Anomaly detection workflow for operational events</li>
           <li>Single operational dashboard for decision-making</li>
         </ul>
+        <div class="hero-logos-row">
+          <img src="{{ '/assets/projects/mia/images/LOGO POTENZA-04.png' | relative_url }}" alt="Potenza">
+          <img src="{{ '/assets/projects/mia/images/logoAtomic3.png' | relative_url }}" alt="Atomic AI">
+        </div>
       </div>
     </div>
 
