@@ -5259,11 +5259,11 @@ hr {
         }
 
         .navbar-toggle {
-            margin: 0 6px 0 0;
+            margin: 0;
             padding: 8px 10px;
             margin-left: auto;
             position: absolute;
-            right: 8px;
+            right: 16px;
             top: 50%;
             transform: translateY(-50%);
         }
@@ -5298,7 +5298,7 @@ hr {
                     order: 2;
                     margin-right: 0;
                     position: absolute;
-                    right: 76px;
+                    right: 88px;
                     top: 50%;
                     transform: translateY(-50%);
 
