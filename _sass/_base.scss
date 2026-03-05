@@ -5252,7 +5252,7 @@ hr {
         .navbar-header {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: flex-start;
             width: 100%;
             gap: 10px;
             position: relative;
@@ -5263,7 +5263,7 @@ hr {
             padding: 8px 10px;
             margin-left: auto;
             position: absolute;
-            right: 16px;
+            right: 12px;
             top: 50%;
             transform: translateY(-50%);
         }
@@ -5298,14 +5298,15 @@ hr {
                     order: 2;
                     margin-right: 0;
                     position: absolute;
-                    right: 88px;
-                    top: 50%;
+                    right: 12px;
+                    top: calc(50% + 28px);
                     transform: translateY(-50%);
+                    z-index: 10007;
 
                     .lang-btn {
-                        padding: 4px 8px !important;
-                        font-size: 10px !important;
-                        min-width: 38px !important;
+                        padding: 4px 10px !important;
+                        font-size: 11px !important;
+                        min-width: 44px !important;
                         line-height: 1.1;
                         border-radius: 10px;
                     }
