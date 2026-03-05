@@ -6100,18 +6100,23 @@ body,
 body.has-hero-header header {
     min-height: 92vh;
 
-    .video-container {
-        filter: saturate(1.08) contrast(1.03);
+    .hero-image-backdrop {
+        position: absolute;
+        inset: 0;
         z-index: 0;
-        opacity: 1;
+        background:
+            radial-gradient(circle at 12% 10%, rgba(14, 165, 163, 0.22), transparent 42%),
+            radial-gradient(circle at 86% 78%, rgba(244, 161, 45, 0.18), transparent 44%),
+            url('/assets/projects/mia/images/logoAtomic.png') center 48% / min(74vw, 760px) auto no-repeat,
+            linear-gradient(130deg, rgba(5, 18, 34, 0.76), rgba(9, 30, 52, 0.64));
+        filter: saturate(1.08) contrast(1.02);
+        opacity: 0.92;
     }
 
     .header-content {
         padding: 118px 15px 84px;
         background:
-            radial-gradient(circle at 12% 10%, rgba(14, 165, 163, 0.22), transparent 42%),
-            radial-gradient(circle at 86% 78%, rgba(244, 161, 45, 0.18), transparent 44%),
-            linear-gradient(130deg, rgba(5, 18, 34, 0.72), rgba(9, 30, 52, 0.58));
+            linear-gradient(130deg, rgba(5, 18, 34, 0.68), rgba(9, 30, 52, 0.52));
     }
 
     .header-content-inner {
@@ -7036,6 +7041,12 @@ body.has-hero-header header .header-content {
 
         .header-content {
             padding: 108px 15px 70px;
+        }
+
+        .hero-image-backdrop {
+            background-size: min(90vw, 520px), auto;
+            background-position: center 44%, center;
+            opacity: 0.9;
         }
     }
 
