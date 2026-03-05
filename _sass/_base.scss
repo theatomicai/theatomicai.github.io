@@ -7372,6 +7372,42 @@ body.has-hero-header header .header-content {
     transform: translateY(-1px);
 }
 
+
+/* Section divider utility */
+.section-divider {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, rgba(15, 23, 42, 0.12), transparent);
+    margin-top: 40px;
+}
+
+/* Featured card variant (use for first case study) */
+.featured {
+    border-color: rgba(45, 212, 191, 0.28) !important;
+    box-shadow: 0 22px 80px rgba(45, 212, 191, 0.10), 0 18px 50px rgba(2, 6, 23, 0.08) !important;
+}
+
+.featured::before {
+    opacity: 1 !important;
+}
+
+/* Glass sticky nav on hero pages */
+body.has-hero-header #mainNav.navbar-fixed-top,
+body.has-hero-header .navbar-default.navbar-fixed-top {
+    background: rgba(7, 11, 22, 0.55) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Social proof inner frame (optional wrapper: .proof-inner) */
+.proof-inner {
+    border-radius: 24px;
+    padding: 22px;
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.02), rgba(15, 23, 42, 0.01));
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.06);
+}
 .apple-trust {
     background: linear-gradient(180deg, #f5f5f7 0%, #ffffff 100%);
 }
@@ -7407,20 +7443,20 @@ body.has-hero-header header .header-content {
 }
 
 .proof-logo-badge {
-    height: 220px;
-    padding: 24px 32px;
-    border-radius: 28px;
-    background: rgba(255, 255, 255, 0.75);
-    border: 1px solid rgba(15, 23, 42, 0.1);
+    height: 44px;
+    padding: 10px 16px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(15, 23, 42, 0.10);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
     display: flex;
     align-items: center;
 }
 
 .proof-logo-badge img {
-    height: 110px;
+    height: 22px;
     width: auto;
-    max-width: 380px;
+    max-width: 160px;
     object-fit: contain;
     filter: saturate(0.95);
     opacity: 0.92;
