@@ -6108,13 +6108,9 @@ body:not(.has-hero-header) #mainNav.navbar-default {
 }
 
 body.has-hero-header #mainNav.navbar-default {
-    background: linear-gradient(180deg, rgba(6, 26, 47, 0.72), rgba(6, 26, 47, 0.32) 65%, rgba(6, 26, 47, 0.05)) !important;
-    box-shadow: none;
-    backdrop-filter: blur(2px);
-
-    .navbar-video-background {
-        opacity: 0.52;
-    }
+    background: #0a2746 !important;
+    box-shadow: 0 8px 28px rgba(6, 20, 36, 0.22);
+    backdrop-filter: none;
 }
 
 /* Identity typography */
