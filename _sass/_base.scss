@@ -6043,6 +6043,21 @@ hr {
         z-index: 2;
     }
 
+    .navbar-content-wrapper,
+    .navbar-header,
+    .navbar-collapse {
+        overflow: visible !important;
+    }
+
+    .brand-container {
+        position: relative;
+        z-index: 10005;
+    }
+
+    .lang-dropdown {
+        z-index: 10006;
+    }
+
     .navbar-brand,
     .navbar-brand:focus,
     .navbar-brand:hover,
