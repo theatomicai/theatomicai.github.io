@@ -6772,8 +6772,10 @@ body.has-hero-header header .header-content {
     video {
         width: 100%;
         display: block;
-        aspect-ratio: 9 / 16;
-        object-fit: cover;
+        height: auto;
+        aspect-ratio: auto;
+        object-fit: contain;
+        background: #000;
     }
 }
 
@@ -6936,6 +6938,61 @@ body.has-hero-header header .header-content {
     }
 }
 
+.sales-case-overview--inverted {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 360px);
+    align-items: stretch;
+}
+
+.sales-case-overview-copy {
+    border: 1px solid var(--id-border);
+    border-radius: 16px;
+    background: var(--id-white);
+    box-shadow: var(--id-shadow);
+    padding: 22px;
+}
+
+.sales-case-overview-lead {
+    margin: 0 0 14px;
+    color: var(--id-ink);
+    line-height: 1.65;
+}
+
+.sales-impact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin: 0 0 14px;
+}
+
+.sales-impact-item {
+    border-radius: 12px;
+    border: 1px solid rgba(12, 42, 73, 0.12);
+    background: #f8fbff;
+    padding: 12px;
+
+    strong {
+        display: block;
+        color: var(--id-navy-800);
+        font-size: 1.05rem;
+        letter-spacing: -0.01em;
+        margin-bottom: 6px;
+    }
+
+    span {
+        display: block;
+        color: var(--id-slate);
+        font-size: 13px;
+        line-height: 1.45;
+    }
+}
+
+.sales-case-overview-media {
+    img {
+        height: 100%;
+        min-height: 240px;
+    }
+}
+
 .sales-data-note {
     margin-top: 14px;
     font-size: 13px;
@@ -6947,6 +7004,10 @@ body.has-hero-header header .header-content {
     .sales-grid-4,
     .sales-grid-3,
     .impact-metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sales-impact-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
@@ -7018,6 +7079,10 @@ body.has-hero-header header .header-content {
         grid-template-columns: 1fr;
     }
 
+    .sales-impact-grid {
+        grid-template-columns: 1fr;
+    }
+
     .sales-section-head {
         margin-bottom: 24px;
 
@@ -7035,6 +7100,7 @@ body.has-hero-header header .header-content {
     .sales-panel,
     .sales-case-content,
     .sales-video-copy,
+    .sales-case-overview-copy,
     .metric-card,
     .claim-card,
     .testimonial-card,
@@ -7292,8 +7358,10 @@ body.has-hero-header header .header-content {
     video {
         width: 100%;
         display: block;
-        aspect-ratio: 16 / 10;
-        object-fit: cover;
+        height: auto;
+        aspect-ratio: auto;
+        object-fit: contain;
+        background: #000;
     }
 }
 
@@ -7331,11 +7399,13 @@ body.has-hero-header header .header-content {
 
 .apple-case-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 18px;
 }
 
 .apple-case-card {
+    grid-column: span 6;
     border-radius: 18px;
     overflow: hidden;
     background: #fbfbfd;
@@ -7349,22 +7419,52 @@ body.has-hero-header header .header-content {
         background: #f2f2f2;
         border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     }
+}
 
-    > div {
-        padding: 16px;
-    }
+.apple-case-card-body {
+    padding: 18px;
+}
 
-    h3 {
-        margin: 0 0 8px;
-        font-size: 1.2rem;
-        letter-spacing: -0.02em;
-        color: #1d1d1f;
-    }
+.apple-case-kicker {
+    display: inline-flex;
+    margin-bottom: 8px;
+    padding: 4px 9px;
+    border-radius: 999px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    color: #0066cc;
+    background: rgba(0, 102, 204, 0.1);
+}
 
-    p {
-        margin: 0 0 10px;
-        color: #6e6e73;
-        line-height: 1.6;
+.apple-case-card h3 {
+    margin: 0 0 8px;
+    font-size: 1.2rem;
+    letter-spacing: -0.02em;
+    color: #1d1d1f;
+}
+
+.apple-case-card p {
+    margin: 0 0 10px;
+    color: #6e6e73;
+    line-height: 1.6;
+}
+
+.apple-case-card--wide {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+    align-items: stretch;
+
+    img {
+        height: 100%;
+        min-height: 170px;
+        border-bottom: 0;
+        border-right: 1px solid rgba(0, 0, 0, 0.06);
+        object-fit: contain;
+        background: linear-gradient(145deg, #eef3fa, #f8fbff);
+        padding: 20px;
     }
 }
 
@@ -7494,5 +7594,21 @@ body.has-hero-header header .header-content {
 
     .apple-feature-video video {
         max-height: 360px;
+    }
+
+    .apple-case-card,
+    .apple-case-card--wide {
+        grid-column: 1 / -1;
+    }
+
+    .apple-case-card--wide {
+        grid-template-columns: 1fr;
+
+        img {
+            min-height: 150px;
+            border-right: 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            padding: 14px;
+        }
     }
 }

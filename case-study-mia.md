@@ -16,16 +16,29 @@ permalink: /case-studies/mia
 
 <section class="sales-section sales-case-layout">
   <div class="container">
-    <div class="sales-case-overview">
-      <img src="{{ '/assets/projects/mia/images/mia-whatsapp.jpeg' | relative_url }}" alt="Mia WhatsApp" loading="lazy">
-      <div>
+    <div class="sales-case-overview sales-case-overview--inverted">
+      <div class="sales-case-overview-copy">
+        <span class="claim-tag verified">Verified impact</span>
         <h2>Impact at a glance</h2>
-        <ul class="sales-metrics">
-          <li>Verified: 90% of users reported Mia was useful</li>
-          <li>Verified: 50,000+ messages exchanged in 3 months</li>
-          <li>Verified: 4,000+ voice notes and 2,000+ images processed</li>
-        </ul>
+        <p class="sales-case-overview-lead">Mia achieved strong adoption during the first three months of deployment through WhatsApp-first interactions.</p>
+        <div class="sales-impact-grid">
+          <article class="sales-impact-item">
+            <strong>90%</strong>
+            <span>Users reported Mia was useful</span>
+          </article>
+          <article class="sales-impact-item">
+            <strong>50,000+</strong>
+            <span>Messages exchanged in 3 months</span>
+          </article>
+          <article class="sales-impact-item">
+            <strong>4,000+ / 2,000+</strong>
+            <span>Voice notes and images processed</span>
+          </article>
+        </div>
         <a href="{{ '/mia' | relative_url }}" class="sales-link">View original project page (Spanish) <i class="fa fa-external-link"></i></a>
+      </div>
+      <div class="sales-case-overview-media">
+        <img src="{{ '/assets/projects/mia/images/mia-whatsapp.jpeg' | relative_url }}" alt="Mia WhatsApp" loading="lazy">
       </div>
     </div>
 
