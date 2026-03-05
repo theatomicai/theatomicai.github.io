@@ -132,13 +132,19 @@ p {
 }
 
 section {
-    padding: 100px 0;
+    padding: 80px 0;
+    position: relative;
     
     // Override for first section in internal pages
     body:not(.has-hero-header) main > &:first-child {
         margin-top: 0 !important;
         padding-top: 0 !important; // Will be set by inline styles or specific rules
     }
+}
+
+/* Alternate section backgrounds (exclude Apple sections to preserve their system) */
+section:not(.apple-section):nth-of-type(even) {
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.03), rgba(15, 23, 42, 0));
 }
 
 // Remove spacing between services CTA and next section
@@ -6220,17 +6226,17 @@ body.has-hero-header header {
 .btn:hover,
 .btn:focus {
     transform: translateY(-1px);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.18);
     filter: brightness(1.05);
 }
 
 .hero-panel {
-    margin-top: 14px;
-    padding: 18px 18px;
+    margin-top: 18px;
+    padding: 18px;
     border-radius: 22px;
     background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.35);
     backdrop-filter: blur(10px);
 }
 
@@ -7314,6 +7320,56 @@ body.has-hero-header header .header-content {
 .apple-link:focus::after {
     opacity: 0.55;
     transform: scaleX(1);
+}
+
+/* Premium Card System (generic classes) */
+.card,
+.apple-metric-card,
+.case-study-card,
+.service-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(2, 6, 23, 0.06), 0 2px 6px rgba(2, 6, 23, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    overflow: hidden;
+}
+
+.card::before,
+.apple-metric-card::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    background:
+        radial-gradient(500px 200px at 30% 0%, rgba(96, 165, 250, 0.18), transparent 60%),
+        radial-gradient(300px 200px at 70% 0%, rgba(45, 212, 191, 0.15), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+}
+
+.card:hover,
+.apple-metric-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 25px 60px rgba(2, 6, 23, 0.12), 0 6px 18px rgba(2, 6, 23, 0.08);
+    border-color: rgba(96, 165, 250, 0.28);
+}
+
+.card:hover::before,
+.apple-metric-card:hover::before {
+    opacity: 1;
+}
+
+/* Micro interactions for chips/badges */
+.pill,
+.tag,
+.badge {
+    transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+.pill:hover {
+    transform: translateY(-1px);
 }
 
 .apple-trust {
