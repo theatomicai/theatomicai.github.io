@@ -6212,6 +6212,16 @@ body.has-hero-header header {
     margin-bottom: 20px;
 }
 
+.hero-panel {
+    margin-top: 14px;
+    padding: 18px 18px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
 body.has-hero-header header .header-content {
     .btn-primary {
         background: linear-gradient(135deg, var(--id-teal), #1ac2c0) !important;
@@ -7273,21 +7283,28 @@ body.has-hero-header header .header-content {
     margin-bottom: 28px;
 }
 
-.proof-logos img {
-    height: 32px;
+.proof-logo-badge {
+    height: 44px;
+    padding: 10px 16px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(15, 23, 42, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    display: flex;
+    align-items: center;
+}
+
+.proof-logo-badge img {
+    height: 22px;
     width: auto;
-    max-width: 180px;
-    padding: 10px 18px;
-    border-radius: 12px;
-    background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-    opacity: 0.92;
+    max-width: 160px;
     object-fit: contain;
+    filter: saturate(0.95);
+    opacity: 0.92;
     transition: transform 0.18s ease, opacity 0.18s ease;
 }
 
-.proof-logos img:hover {
+.proof-logo-badge img:hover {
     transform: translateY(-2px);
     opacity: 1;
 }
@@ -7360,11 +7377,24 @@ body.has-hero-header header .header-content {
 .apple-list-card,
 .apple-case-card,
 .apple-feature-copy,
-.apple-process-item {
+.apple-process-item,
+.proof-metric {
     border-radius: var(--ds-radius-md);
     border: 1px solid var(--ds-border);
     box-shadow: var(--ds-shadow-sm);
     background: var(--ds-surface);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.apple-capability-item:hover,
+.apple-list-card:hover,
+.apple-case-card:hover,
+.apple-feature-copy:hover,
+.apple-process-item:hover,
+.proof-metric:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--ds-shadow-md);
+    border-color: rgba(96, 165, 250, 0.28);
 }
 
 .apple-capabilities {
