@@ -1,5 +1,15 @@
 <header>
-  <div class="hero-image-backdrop" aria-hidden="true"></div>
+  <video id="hero-video"
+        class="video-container"
+        autoplay
+        muted
+        loop
+        playsinline
+        webkit-playsinline
+        preload="auto"
+  >
+    <source src="{{ '/assets/video/hero-pingpong-mobile.mp4' | relative_url }}" type="video/mp4">
+  </video>
   <div class="header-content">
     <div class="header-content-inner">
       <div class="header-logo">

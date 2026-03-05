@@ -6100,23 +6100,18 @@ body,
 body.has-hero-header header {
     min-height: 92vh;
 
-    .hero-image-backdrop {
-        position: absolute;
-        inset: 0;
+    .video-container {
+        filter: saturate(1.08) contrast(1.03);
         z-index: 0;
-        background:
-            radial-gradient(circle at 12% 10%, rgba(14, 165, 163, 0.22), transparent 42%),
-            radial-gradient(circle at 86% 78%, rgba(244, 161, 45, 0.18), transparent 44%),
-            url('/assets/projects/mia/images/logoAtomic.png') center 48% / min(74vw, 760px) auto no-repeat,
-            linear-gradient(130deg, rgba(5, 18, 34, 0.76), rgba(9, 30, 52, 0.64));
-        filter: saturate(1.08) contrast(1.02);
-        opacity: 0.92;
+        opacity: 1;
     }
 
     .header-content {
         padding: 118px 15px 84px;
         background:
-            linear-gradient(130deg, rgba(5, 18, 34, 0.68), rgba(9, 30, 52, 0.52));
+            radial-gradient(circle at 12% 10%, rgba(14, 165, 163, 0.22), transparent 42%),
+            radial-gradient(circle at 86% 78%, rgba(244, 161, 45, 0.18), transparent 44%),
+            linear-gradient(130deg, rgba(5, 18, 34, 0.72), rgba(9, 30, 52, 0.58));
     }
 
     .header-content-inner {
@@ -7042,12 +7037,6 @@ body.has-hero-header header .header-content {
         .header-content {
             padding: 108px 15px 70px;
         }
-
-        .hero-image-backdrop {
-            background-size: min(90vw, 520px), auto;
-            background-position: center 44%, center;
-            opacity: 0.9;
-        }
     }
 
     .header-cta-actions {
@@ -7621,5 +7610,421 @@ body.has-hero-header header .header-content {
             border-bottom: 1px solid rgba(0, 0, 0, 0.06);
             padding: 14px;
         }
+    }
+}
+
+/* Apple-style Services page */
+.apple-services-page {
+    background: #f5f5f7;
+}
+
+.apple-services-hero {
+    padding: clamp(112px, 12vw, 168px) 0 clamp(52px, 6vw, 84px);
+    background:
+        radial-gradient(circle at 12% 8%, rgba(10, 132, 255, 0.16), transparent 45%),
+        radial-gradient(circle at 85% 88%, rgba(94, 92, 230, 0.16), transparent 45%),
+        linear-gradient(180deg, #f5f8ff 0%, #f5f5f7 100%);
+}
+
+.apple-services-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: 16px;
+    align-items: stretch;
+}
+
+.apple-services-hero-card {
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(8, 18, 36, 0.12);
+    box-shadow: 0 24px 54px rgba(18, 24, 38, 0.12);
+    padding: clamp(24px, 3.2vw, 38px);
+
+    h1 {
+        margin: 10px 0 14px;
+        font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+        font-weight: 700;
+        letter-spacing: -0.035em;
+        line-height: 1.07;
+        color: #141519;
+        font-size: clamp(2rem, 5.2vw, 3.65rem);
+        max-width: 860px;
+    }
+
+    p {
+        margin: 0;
+        max-width: 760px;
+        color: #53555d;
+        font-size: clamp(1rem, 1.7vw, 1.14rem);
+        line-height: 1.62;
+    }
+}
+
+.apple-services-hero-actions {
+    justify-content: flex-start;
+    margin-top: 24px;
+}
+
+.apple-services-signal-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.apple-services-signal-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: rgba(0, 102, 204, 0.1);
+    color: #0a3e7b;
+    font-size: 11px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    i {
+        font-size: 12px;
+    }
+}
+
+.apple-services-hero-media {
+    border-radius: 28px;
+    overflow: hidden;
+    border: 1px solid rgba(8, 18, 36, 0.12);
+    box-shadow: 0 22px 52px rgba(18, 24, 38, 0.15);
+    background: #0f121a;
+    min-height: 100%;
+
+    img {
+        width: 100%;
+        height: 100%;
+        min-height: 340px;
+        object-fit: cover;
+        display: block;
+        filter: saturate(1.04) contrast(1.02);
+    }
+}
+
+.apple-services-tracks {
+    background: #ffffff;
+}
+
+.apple-services-track-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.apple-services-track {
+    border-radius: 24px;
+    background: #fbfbfd;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 14px 32px rgba(17, 21, 31, 0.08);
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.apple-services-track-head {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.apple-services-track-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #0a84ff, #3369ff);
+    color: #fff;
+    flex: 0 0 auto;
+    box-shadow: 0 8px 20px rgba(0, 102, 204, 0.3);
+
+    i {
+        font-size: 17px;
+    }
+}
+
+.apple-services-track-kicker {
+    margin: 1px 0 5px;
+    color: #6e6e73;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.apple-services-track h3 {
+    margin: 0;
+    color: #1d1d1f;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    font-size: clamp(1.2rem, 2vw, 1.52rem);
+}
+
+.apple-services-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 9px;
+
+    li {
+        position: relative;
+        margin: 0;
+        padding-left: 20px;
+        color: #42444c;
+        line-height: 1.56;
+        font-size: 0.97rem;
+    }
+
+    li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 9px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: linear-gradient(145deg, #0a84ff, #3d70ff);
+        box-shadow: 0 0 0 4px rgba(10, 132, 255, 0.14);
+    }
+}
+
+.apple-services-pill {
+    display: inline-flex;
+    margin-top: 2px;
+    align-self: flex-start;
+    padding: 7px 12px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #2b3f5f;
+    background: rgba(43, 63, 95, 0.1);
+}
+
+.apple-services-outcomes {
+    background: linear-gradient(180deg, #f8f8fb 0%, #f1f3f8 100%);
+}
+
+.apple-services-example-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.apple-services-example-card {
+    border-radius: 20px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 12px 26px rgba(15, 18, 28, 0.07);
+    padding: 18px;
+
+    i {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 102, 204, 0.12);
+        color: #0a58b0;
+        font-size: 16px;
+    }
+
+    h3 {
+        margin: 0 0 8px;
+        color: #1d1d1f;
+        letter-spacing: -0.02em;
+        font-size: 1.18rem;
+    }
+
+    p {
+        margin: 0;
+        color: #5f6169;
+        line-height: 1.56;
+        font-size: 0.95rem;
+    }
+}
+
+.apple-services-process {
+    background: #ffffff;
+}
+
+.apple-services-process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.apple-services-process-item {
+    border-radius: 18px;
+    background: #fbfbfd;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 22px rgba(15, 18, 28, 0.07);
+    padding: 16px;
+}
+
+.apple-services-process-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+    span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 34px;
+        height: 24px;
+        border-radius: 999px;
+        padding: 0 10px;
+        background: rgba(0, 113, 227, 0.12);
+        color: #0066cc;
+        font-size: 11px;
+        letter-spacing: 0.07em;
+        font-weight: 700;
+    }
+
+    i {
+        color: #0a66cc;
+        font-size: 16px;
+    }
+}
+
+.apple-services-process-item h3 {
+    margin: 0 0 8px;
+    color: #1d1d1f;
+    letter-spacing: -0.02em;
+    font-size: 1.13rem;
+}
+
+.apple-services-process-item p {
+    margin: 0;
+    color: #5f6169;
+    line-height: 1.56;
+    font-size: 0.94rem;
+}
+
+.apple-services-proof {
+    background: #f5f5f7;
+}
+
+.apple-services-proof-wrap {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
+    gap: 16px;
+}
+
+.apple-services-proof-copy {
+    border-radius: 24px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 14px 32px rgba(15, 18, 28, 0.09);
+    padding: 24px;
+
+    h2 {
+        margin: 8px 0 12px;
+        color: #1d1d1f;
+        letter-spacing: -0.03em;
+        line-height: 1.15;
+        font-size: clamp(1.7rem, 3vw, 2.45rem);
+    }
+
+    p {
+        margin: 0;
+        color: #5f6169;
+        line-height: 1.6;
+    }
+}
+
+.apple-services-proof-metrics {
+    margin: 16px 0 12px;
+    padding-left: 18px;
+    display: grid;
+    gap: 8px;
+
+    li {
+        color: #3f434d;
+        line-height: 1.55;
+    }
+
+    strong {
+        color: #1f2a44;
+    }
+}
+
+.apple-services-proof-note {
+    font-size: 0.9rem;
+    color: #6e6e73;
+}
+
+.apple-services-proof-media {
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: #000;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.2);
+
+    video {
+        width: 100%;
+        height: 100%;
+        min-height: 320px;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+@media (max-width: 1199px) {
+    .apple-services-hero-grid,
+    .apple-services-proof-wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .apple-services-example-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .apple-services-process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .apple-services-track-grid,
+    .apple-services-example-grid,
+    .apple-services-process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .apple-services-hero {
+        padding-top: 102px;
+    }
+
+    .apple-services-hero-card {
+        border-radius: 22px;
+        padding: 20px;
+    }
+
+    .apple-services-track,
+    .apple-services-proof-copy {
+        border-radius: 20px;
+    }
+
+    .apple-services-proof-media video,
+    .apple-services-hero-media img {
+        min-height: 220px;
     }
 }
