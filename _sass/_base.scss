@@ -7813,6 +7813,22 @@ body.has-hero-header header .header-content {
         grid-template-columns: 1fr;
     }
 
+    .proof-logos {
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .proof-logo-badge {
+        height: 120px;
+        padding: 16px 20px;
+        border-radius: 20px;
+    }
+
+    .proof-logo-badge img {
+        height: 56px;
+        max-width: 220px;
+    }
+
     .apple-shell {
         width: min(1120px, calc(100vw - 24px));
     }
@@ -7835,6 +7851,19 @@ body.has-hero-header header .header-content {
             border-bottom: 1px solid rgba(0, 0, 0, 0.06);
             padding: 14px;
         }
+    }
+}
+
+@media (max-width: 600px) {
+    .proof-logo-badge {
+        height: 96px;
+        padding: 12px 16px;
+        border-radius: 18px;
+    }
+
+    .proof-logo-badge img {
+        height: 44px;
+        max-width: 180px;
     }
 }
 
