@@ -5262,6 +5262,10 @@ hr {
             margin: 0 6px 0 0;
             padding: 8px 10px;
             margin-left: auto;
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
         }
 
         .navbar-header {
@@ -5272,6 +5276,7 @@ hr {
                 justify-content: flex-start;
                 flex: 1 1 auto;
                 flex-wrap: nowrap;
+                padding-right: 64px;
                 
                 .navbar-brand {
                     font-size: 14px !important;
@@ -5291,7 +5296,7 @@ hr {
                     display: flex;
                     align-items: center;
                     order: 2;
-                    margin-right: 8px;
+                    margin-right: 0;
 
                     .lang-btn {
                         padding: 4px 8px !important;
