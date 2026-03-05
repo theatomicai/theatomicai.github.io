@@ -8576,3 +8576,92 @@ body.has-hero-header header .header-content {
     float: none !important;
   }
 }
+
+/* Final navbar coupling fix: keep brand + language + menu in one stable row */
+#mainNav.navbar-default {
+  .navbar-content-wrapper,
+  .navbar-header {
+    overflow: visible !important;
+  }
+
+  .navbar-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    gap: 14px !important;
+  }
+
+  .navbar-header .brand-container {
+    display: flex !important;
+    align-items: center !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+  }
+
+  .navbar-header .brand-container .navbar-brand {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    min-width: 0 !important;
+  }
+
+  .navbar-header .navbar-actions {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 14px !important;
+    margin-left: auto !important;
+    flex: 0 0 auto !important;
+    min-width: 0 !important;
+  }
+
+  .navbar-header .navbar-actions .brand-lang-selector {
+    position: relative !important;
+    margin: 0 !important;
+    flex: 0 0 auto !important;
+  }
+
+  .navbar-header .navbar-actions .brand-lang-selector .lang-dropdown {
+    top: calc(100% + 10px) !important;
+    left: auto !important;
+    right: 0 !important;
+    min-width: 162px !important;
+    z-index: 10060 !important;
+  }
+
+  .navbar-header .navbar-actions .navbar-toggle {
+    position: relative !important;
+    float: none !important;
+    margin: 0 !important;
+    padding: 8px 10px !important;
+    flex: 0 0 auto !important;
+  }
+}
+
+@media (max-width: 767px) {
+  #mainNav.navbar-default .navbar-header {
+    min-height: 60px !important;
+    gap: 10px !important;
+  }
+
+  #mainNav.navbar-default .navbar-header .brand-container {
+    min-width: 0 !important;
+  }
+
+  #mainNav.navbar-default .navbar-header .brand-container .navbar-brand {
+    max-width: 100% !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+
+  #mainNav.navbar-default .navbar-header .navbar-actions {
+    gap: 12px !important;
+  }
+
+  #mainNav.navbar-default .navbar-header .navbar-actions .brand-lang-selector .lang-btn {
+    min-width: 44px !important;
+    padding: 4px 10px !important;
+    font-size: 11px !important;
+  }
+}
