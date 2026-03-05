@@ -21,15 +21,30 @@ permalink: /case-studies/custom-platforms
       <div>
         <h2>Outcome summary</h2>
         <ul class="sales-metrics">
-          <li>Domain-specific workflow automation</li>
-          <li>Secure roles, permissions, and audit readiness</li>
-          <li>Scalable architecture for future modules</li>
+          <li>Documented: domain-specific workflow automation</li>
+          <li>Documented: secure roles, permissions, and audit readiness</li>
+          <li>Documented: scalable architecture for future modules</li>
         </ul>
         <div class="hero-logos-row">
           <img src="{{ '/assets/projects/mia/images/ortodonciasv1.png' | relative_url }}" alt="Client platform">
           <img src="{{ '/assets/projects/mia/images/logoAtomic3.png' | relative_url }}" alt="Atomic AI">
         </div>
       </div>
+    </div>
+
+    <div class="claim-buckets">
+      <article class="claim-card">
+        <span class="claim-tag documented">Documented</span>
+        <p>Custom software delivery for clinic and energy operations with workflow-specific module design.</p>
+      </article>
+      <article class="claim-card">
+        <span class="claim-tag documented">Documented</span>
+        <p>Role-based control layers, operational traceability, and architecture built for multi-team usage.</p>
+      </article>
+      <article class="claim-card">
+        <span class="claim-tag target">Target / Estimate</span>
+        <p>Business impact varies by implementation context and is validated per project scope.</p>
+      </article>
     </div>
 
     <div class="sales-grid sales-grid-2">
@@ -73,5 +88,6 @@ permalink: /case-studies/custom-platforms
     <div class="sales-center-cta">
       <a href="{{ '/contact' | relative_url }}" class="btn btn-primary btn-xl">Discuss your custom platform</a>
     </div>
+    <p class="sales-data-note">Data note: this case is presented as documented implementation scope without numeric ROI claims.</p>
   </div>
 </section>

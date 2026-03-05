@@ -21,9 +21,9 @@ permalink: /case-studies/mia
       <div>
         <h2>Impact at a glance</h2>
         <ul class="sales-metrics">
-          <li>90% of users reported Mia was useful</li>
-          <li>50,000+ messages exchanged in 3 months</li>
-          <li>Multimodal interactions through text, voice, and images</li>
+          <li>Verified: 90% of users reported Mia was useful</li>
+          <li>Verified: 50,000+ messages exchanged in 3 months</li>
+          <li>Verified: 4,000+ voice notes and 2,000+ images processed</li>
         </ul>
         <a href="{{ '/mia' | relative_url }}" class="sales-link">View original project page (Spanish) <i class="fa fa-external-link"></i></a>
       </div>
@@ -43,6 +43,21 @@ permalink: /case-studies/mia
           <img src="{{ '/assets/projects/mia/images/actemp.png' | relative_url }}" alt="ACTEMP">
         </div>
       </div>
+    </div>
+
+    <div class="claim-buckets">
+      <article class="claim-card">
+        <span class="claim-tag verified">Verified</span>
+        <p>Usage and usefulness metrics are from the active Mia deployment report and are safe for headline claims.</p>
+      </article>
+      <article class="claim-card">
+        <span class="claim-tag documented">Documented</span>
+        <p>Partnership model and delivery context: implemented with CCIT support and funded via ILO collaboration.</p>
+      </article>
+      <article class="claim-card">
+        <span class="claim-tag documented">Documented</span>
+        <p>Multimodal interaction model includes text, voice, and image inputs through WhatsApp.</p>
+      </article>
     </div>
 
     <div class="sales-grid sales-grid-2">
@@ -86,6 +101,6 @@ permalink: /case-studies/mia
     <div class="sales-center-cta">
       <a href="{{ '/contact' | relative_url }}" class="btn btn-primary btn-xl">Discuss a similar LLM assistant</a>
     </div>
-    <p class="sales-data-note">Data note: 90% usefulness and 50,000+ messages in three months come from the current Mia implementation report.</p>
+    <p class="sales-data-note">Data note: 90% usefulness, 50,000+ messages, 4,000+ voice notes, and 2,000+ images come from the current Mia implementation report.</p>
   </div>
 </section>

@@ -23,7 +23,7 @@ permalink: /projects
 
 <section class="sales-section sales-proof">
   <div class="container">
-    <div class="sales-grid sales-grid-3">
+    <div class="sales-grid sales-grid-4">
       <article class="sales-case-card">
         <img src="{{ '/assets/projects/mia/images/mia.jpeg' | relative_url }}" alt="Mia case study" loading="lazy">
         <div class="sales-case-content">
@@ -60,6 +60,19 @@ permalink: /projects
             <li>Scalable deployments across workflows</li>
           </ul>
           <a href="{{ '/case-studies/custom-platforms' | relative_url }}" class="sales-link">Read case study <i class="fa fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="sales-case-card">
+        <img src="{{ '/assets/projects/mia/images/logoAtomic3.png' | relative_url }}" alt="Policy gateway case study" loading="lazy">
+        <div class="sales-case-content">
+          <h3>Just Transition Policy Gateway</h3>
+          <p>Multilingual policy analysis platform with document intelligence and structured exploration tools.</p>
+          <ul class="sales-metrics">
+            <li>Documented implementation scope</li>
+            <li>Multilingual and searchable policy database</li>
+          </ul>
+          <a href="{{ '/contact' | relative_url }}" class="sales-link">Request case details <i class="fa fa-arrow-right"></i></a>
         </div>
       </article>
     </div>

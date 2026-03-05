@@ -21,15 +21,30 @@ permalink: /case-studies/potenza
       <div>
         <h2>Outcome summary</h2>
         <ul class="sales-metrics">
-          <li>Unified data flow across historical and live telemetry</li>
-          <li>Anomaly detection workflow for operational events</li>
-          <li>Single operational dashboard for decision-making</li>
+          <li>Documented: unified data flow across historical and live telemetry</li>
+          <li>Documented: anomaly detection workflow for operational events</li>
+          <li>Documented: single operational dashboard for decision-making</li>
         </ul>
         <div class="hero-logos-row">
           <img src="{{ '/assets/projects/mia/images/LOGO POTENZA-04.png' | relative_url }}" alt="Potenza">
           <img src="{{ '/assets/projects/mia/images/logoAtomic3.png' | relative_url }}" alt="Atomic AI">
         </div>
       </div>
+    </div>
+
+    <div class="claim-buckets">
+      <article class="claim-card">
+        <span class="claim-tag documented">Documented</span>
+        <p>Designed for portfolios with 7 plants, 4,077 supported devices, and 43,138 active telemetry sources.</p>
+      </article>
+      <article class="claim-card">
+        <span class="claim-tag documented">Documented</span>
+        <p>REST plus WebSocket integration with Real vs Predictive curves, P10 to P90 uncertainty bands, heatmaps, and health scoring.</p>
+      </article>
+      <article class="claim-card">
+        <span class="claim-tag target">Target / Estimate</span>
+        <p>Design targets included nMAE under 5% (day-ahead forecast) and fewer than 2 false positives per day for anomaly workflows.</p>
+      </article>
     </div>
 
     <div class="sales-grid sales-grid-2">
@@ -73,5 +88,6 @@ permalink: /case-studies/potenza
     <div class="sales-center-cta">
       <a href="{{ '/contact' | relative_url }}" class="btn btn-primary btn-xl">Plan an analytics platform</a>
     </div>
+    <p class="sales-data-note">Data note: scale figures and technical capabilities are documented project context; nMAE and false-positive values are design targets, not guaranteed outcomes.</p>
   </div>
 </section>
