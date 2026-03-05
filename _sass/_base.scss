@@ -7792,6 +7792,17 @@ body.has-hero-header .navbar-default.navbar-fixed-top {
     }
 }
 
+.apple-case-logo--round {
+    width: 140px !important;
+    height: 140px !important;
+    margin: 18px auto 0;
+    border-radius: 50%;
+    background: #fff !important;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 18px !important;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
 .apple-case-card-body {
     padding: 18px;
 }
