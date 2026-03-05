@@ -5255,11 +5255,13 @@ hr {
             justify-content: space-between;
             width: 100%;
             gap: 10px;
+            position: relative;
         }
 
         .navbar-toggle {
             margin: 0 6px 0 0;
             padding: 8px 10px;
+            margin-left: auto;
         }
 
         .navbar-header {
