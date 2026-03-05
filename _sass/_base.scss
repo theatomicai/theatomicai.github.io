@@ -5256,6 +5256,7 @@ hr {
             width: 100%;
             gap: 10px;
             position: relative;
+            align-items: flex-start;
         }
 
         .navbar-toggle {
@@ -5264,8 +5265,8 @@ hr {
             margin-left: auto;
             position: absolute;
             right: 12px;
-            top: 50%;
-            transform: translateY(-50%);
+            top: 8px;
+            transform: none;
         }
 
         .navbar-header {
@@ -5275,7 +5276,7 @@ hr {
                 align-items: center;
                 justify-content: flex-start;
                 flex: 1 1 auto;
-                flex-wrap: nowrap;
+                flex-wrap: wrap;
                 padding-right: 96px;
                 
                 .navbar-brand {
@@ -5285,6 +5286,7 @@ hr {
                     gap: 6px;
                     margin-right: 0;
                     white-space: nowrap;
+                    flex: 1 1 auto;
                     
                     .navbar-logo {
                         height: 22px !important;
@@ -5297,11 +5299,12 @@ hr {
                     align-items: center;
                     order: 2;
                     margin-right: 0;
-                    position: absolute;
-                    right: 12px;
-                    top: calc(50% + 28px);
-                    transform: translateY(-50%);
+                    position: static;
+                    transform: none;
                     z-index: 10007;
+                    width: 100%;
+                    justify-content: flex-end;
+                    margin-top: 6px;
 
                     .lang-btn {
                         padding: 4px 10px !important;
