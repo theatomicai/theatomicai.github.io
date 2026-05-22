@@ -295,18 +295,41 @@
         <span class="stage-corner sc-bl">LAT 14.10°N · LON 87.22°W</span>
         <span class="stage-corner sc-br">v 4.2.1</span>
 
-        <div class="mia-composite">
-          <div class="video-stage">
-            <div class="video-chrome">
-              <span class="vc-dot"></span>
-              <span class="vc-path">atomic://mia/promo</span>
-              <span>HN · CR</span>
+        <div class="mia-composite mia-carousel" aria-label="Mia evidence carousel">
+          <div class="mia-carousel-track">
+            <div class="mia-slide" id="home-mia-video">
+              <div class="video-stage">
+                <div class="video-chrome">
+                  <span class="vc-dot"></span>
+                  <span class="vc-path">atomic://mia/promo</span>
+                  <span>HN · CR</span>
+                </div>
+                <video src="assets/projects/mia/videos/promoting-mia.mp4" autoplay muted loop playsinline poster="assets/mia-portrait.jpeg"></video>
+                <div class="video-foot">
+                  <span class="vf-title serif">Mia <span class="it">— asesora CCIT</span></span>
+                  <span>VIDEO · LIVE</span>
+                </div>
+              </div>
             </div>
-            <video src="assets/projects/mia/videos/promoting-mia.mp4" autoplay muted loop playsinline poster="assets/mia-portrait.jpeg"></video>
-            <div class="video-foot">
-              <span class="vf-title serif">Mia <span class="it">— asesora CCIT</span></span>
-              <span>VIDEO · LIVE</span>
+
+            <div class="mia-slide" id="home-mia-chat">
+              <div class="phone-col">
+                <div class="pc-label">EVIDENCE · CARLA · 2025</div>
+                <div class="phone is-screenshot">
+                  <div class="phone-screen">
+                    <img src="assets/mia-whatsapp-1.jpeg" alt="Real Mia conversation — Carla shares handwritten sales notes, Mia tabulates daily sales in Lempiras." />
+                  </div>
+                </div>
+                <div class="pc-meta">
+                  <span>MULTIMODAL · IMAGE → STRUCTURED</span>
+                  <span>CITED · LIVE</span>
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="mia-carousel-tabs" aria-label="Mia carousel controls">
+            <a href="#home-mia-video">Video</a>
+            <a href="#home-mia-chat">WhatsApp</a>
           </div>
         </div>
       </div>

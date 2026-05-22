@@ -129,33 +129,43 @@
         <span class="stage-corner sc-bl">LAT 14.10°N · LON 87.22°W</span>
         <span class="stage-corner sc-br">v 4.2.1</span>
 
-        <div class="mia-composite">
-          <!-- Video stage -->
-          <div class="video-stage">
-            <div class="video-chrome">
-              <span class="vc-dot"></span>
-              <span class="vc-path">atomic://mia/promo</span>
-              <span>HN · CR · ES</span>
-            </div>
-            <video src="assets/projects/mia/videos/promoting-mia.mp4" autoplay muted loop playsinline poster="assets/mia-portrait.jpeg"></video>
-            <div class="video-foot">
-              <span class="vf-title serif">Mia <span class="it">— asesora CCIT</span></span>
-              <span>VIDEO · LIVE</span>
-            </div>
-          </div>
-
-          <!-- Real WhatsApp screenshot in phone bezel -->
-          <div class="phone-col">
-            <div class="pc-label">EVIDENCE · CARLA · 2025</div>
-            <div class="phone is-screenshot">
-              <div class="phone-screen">
-                <img src="assets/mia-whatsapp-1.jpeg" alt="Real Mia conversation — Carla shares handwritten sales notes, Mia tabulates daily sales in Lempiras." />
+        <div class="mia-composite mia-carousel" aria-label="Mia evidence carousel">
+          <div class="mia-carousel-track">
+            <!-- Video stage -->
+            <div class="mia-slide" id="project-mia-video">
+              <div class="video-stage">
+                <div class="video-chrome">
+                  <span class="vc-dot"></span>
+                  <span class="vc-path">atomic://mia/promo</span>
+                  <span>HN · CR · ES</span>
+                </div>
+                <video src="assets/projects/mia/videos/promoting-mia.mp4" autoplay muted loop playsinline poster="assets/mia-portrait.jpeg"></video>
+                <div class="video-foot">
+                  <span class="vf-title serif">Mia <span class="it">— asesora CCIT</span></span>
+                  <span>VIDEO · LIVE</span>
+                </div>
               </div>
             </div>
-            <div class="pc-meta">
-              <span>MULTIMODAL · IMAGE → STRUCTURED</span>
-              <span>CITED · LIVE</span>
+
+            <!-- Real WhatsApp screenshot in phone bezel -->
+            <div class="mia-slide" id="project-mia-chat">
+              <div class="phone-col">
+                <div class="pc-label">EVIDENCE · CARLA · 2025</div>
+                <div class="phone is-screenshot">
+                  <div class="phone-screen">
+                    <img src="assets/mia-whatsapp-1.jpeg" alt="Real Mia conversation — Carla shares handwritten sales notes, Mia tabulates daily sales in Lempiras." />
+                  </div>
+                </div>
+                <div class="pc-meta">
+                  <span>MULTIMODAL · IMAGE → STRUCTURED</span>
+                  <span>CITED · LIVE</span>
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="mia-carousel-tabs" aria-label="Mia carousel controls">
+            <a href="#project-mia-video">Video</a>
+            <a href="#project-mia-chat">WhatsApp</a>
           </div>
         </div>
       </div>
@@ -188,7 +198,7 @@
   <div class="wrap">
     <div class="idx-row">
       <div class="idx-num">CASE 02 / D-002</div>
-      <img class="project-brand-logo potenza-brand" src="assets/projects/mia/images/LOGO POTENZA-04.png" alt="Potenza logo" />
+      <img class="project-brand-logo potenza-brand" src="assets/logo-potenza.webp" alt="Potenza logo" />
       <h2 class="idx-title serif" style="color:var(--dark-text);">Potenza.<br/><span class="it">A control room for solar generation.</span></h2>
       <div class="idx-aside">
         Built end-to-end: historical extraction, real-time pipelines, anomaly models, and executive dashboards for solar plant performance.
@@ -279,7 +289,7 @@
   <div class="wrap">
     <div class="idx-row">
       <div class="idx-num">CASE 03 / D-003</div>
-      <img class="project-brand-logo ortodoncia-brand" src="assets/projects/mia/images/OrtodonciaSv.png" alt="Ortodoncia SV logo" />
+      <img class="project-brand-logo ortodoncia-brand" src="assets/logo-ortodoncia-transparent.png" alt="Ortodoncia SV logo" />
       <h2 class="idx-title serif">Custom software<br/><span class="it">for clinics, energy, and logistics.</span></h2>
       <div class="idx-aside">
         Beyond AI: the systems-of-record that institutions depend on every day. Clinical scheduling and patient flow for an orthodontics network; inventory and routing for an energy operator; administrative workflows engineered for scale and security.
