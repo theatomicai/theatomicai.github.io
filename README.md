@@ -1,19 +1,28 @@
-# Creative Theme for Jekyll
+# Atomic AI Website
 
-A Jekyll implementation of the [Creative Theme](http://startbootstrap.com/template-overviews/creative/) template by [Start Bootstrap](http://startbootstrap.com).
+Corporate website for Atomic AI.
 
-Creative is a one page Bootstrap theme for creatives, small businesses, and other multipurpose uses.
-The theme includes a number of rich features and plugins that you can use as a great boilerplate for your next Jekyll project! 
+The site now uses the redesigned institutional web direction from `Atomic AI - DESIGN`,
+curated with the production content and assets already present in this repository:
+Mia, Potenza, custom software, partner logos, screenshots, audio, and video.
 
-See it live in action at <https://volny.github.io/creative-theme-jekyll/>
+## Key Routes
 
-## To use the Creative Theme template in your project
+- `/` - Corporate homepage
+- `/platforms.html` - Deployable AI platforms
+- `/projects.html` - Case studies and evidence
+- `/about.html` - Company position, principles, partners
+- `/contact.html` - Project brief form
+- `/mia` - Detailed Mia project page
 
-- Start by adding your info in `_config.yml`
-- In `_layouts/front.html` reorder or remove section as you prefer.
+Legacy routes `/about`, `/services`, `/projects`, and `/contact` redirect to the
+new canonical pages.
 
-## Run locally
+## Run Locally
 
-```
+```bash
 bundle exec jekyll serve
 ```
+
+If local Ruby/Jekyll compatibility is an issue, the main `.html` pages can also
+be opened through a simple static file server for visual review.
