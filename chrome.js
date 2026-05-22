@@ -7,7 +7,7 @@
   <nav class="nav">
     <div class="wrap nav-inner">
       <a class="nav-brand" href="index.html">
-        <span class="nav-mark" aria-hidden="true"></span>
+        <img class="nav-mark" src="assets/logo-atomicw.png" alt="" aria-hidden="true" />
         <span class="nav-name"><b>Atomic</b> AI</span>
       </a>
       <div class="nav-links">
@@ -45,7 +45,7 @@
     <div class="wrap">
       <div class="foot-grid">
         <div class="brand-blk">
-          <div class="name"><span class="mk" aria-hidden="true"></span>Atomic <span class="it">AI</span></div>
+          <div class="name"><img class="mk" src="assets/logo-atomicw.png" alt="" aria-hidden="true" />Atomic <span class="it">AI</span></div>
           <p>Human-centered AI infrastructure for institutions and enterprises. Headquartered in San Salvador, with deployments across Central America. Bilingual by default.</p>
         </div>
         <div>
