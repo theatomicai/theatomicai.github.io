@@ -1074,7 +1074,7 @@ a { color: inherit; text-decoration: none; }
    SELECTED COLLABORATIONS — premium institutional section
    ============================================================ */
 .collab-section {
-  padding: 140px 0 120px;
+  padding: 104px 0 96px;
   border-top: 1px solid var(--line);
   position: relative;
 }
@@ -1083,7 +1083,7 @@ a { color: inherit; text-decoration: none; }
   grid-template-columns: 200px 1fr 280px;
   gap: 56px;
   align-items: baseline;
-  padding-bottom: 72px;
+  padding-bottom: 56px;
   border-bottom: 1px solid var(--line);
   margin-bottom: 0;
 }
@@ -1230,9 +1230,10 @@ a { color: inherit; text-decoration: none; }
   stroke-width: 1;
 }
 .ops-land path {
-  fill: rgba(230, 236, 245, 0.075);
-  stroke: rgba(230, 236, 245, 0.18);
-  stroke-width: 1;
+  fill: rgba(230, 236, 245, 0.085);
+  stroke: rgba(230, 236, 245, 0.2);
+  stroke-width: 0.85;
+  vector-effect: non-scaling-stroke;
 }
 .ops-routes path {
   fill: none;
@@ -1468,8 +1469,8 @@ a { color: inherit; text-decoration: none; }
 .collab-foot .cf .cfv .it { font-style: italic; color: var(--muted); }
 
 @media (max-width: 980px) {
-  .collab-section { padding: 96px 0 80px; }
-  .collab-head { grid-template-columns: 1fr; gap: 24px; padding-bottom: 48px; }
+  .collab-section { padding: 76px 0 68px; }
+  .collab-head { grid-template-columns: 1fr; gap: 24px; padding-bottom: 38px; }
   .collab-head .ch-aside { max-width: none; }
   .collab-grid { grid-template-columns: 1fr; }
   .collab-cell { padding: 56px 32px 48px; min-height: 280px; }
@@ -2220,6 +2221,53 @@ a { color: inherit; text-decoration: none; }
   resize: none;
 }
 .form-row input::placeholder, .form-row textarea::placeholder { color: var(--muted-2); }
+.form-row:focus-within .lbl {
+  color: var(--ink-soft);
+}
+.form-row.email-row {
+  grid-template-columns: 200px 1fr;
+  row-gap: 8px;
+  padding: 26px 0;
+  background: linear-gradient(90deg, rgba(15, 27, 51, 0.035), transparent 72%);
+}
+.form-row.email-row .lbl {
+  color: var(--ink-soft);
+}
+.email-field {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: baseline;
+  gap: 14px;
+  padding: 10px 0 9px;
+  border-bottom: 1px solid var(--line-strong);
+}
+.email-prefix {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.email-field input {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(26px, 3vw, 42px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  padding: 0;
+}
+.email-field input::placeholder {
+  color: color-mix(in oklab, var(--muted) 68%, transparent);
+}
+.field-note {
+  grid-column: 2;
+  max-width: 440px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  line-height: 1.55;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
 .form-row.tall { align-items: start; }
 .form-row.tall textarea { min-height: 100px; }
 .form-actions {
@@ -2236,6 +2284,9 @@ a { color: inherit; text-decoration: none; }
 }
 @media (max-width: 700px) {
   .form-row { grid-template-columns: 1fr; gap: 6px; }
+  .form-row.email-row { grid-template-columns: 1fr; }
+  .field-note { grid-column: 1; }
+  .email-field { gap: 10px; }
   .form-actions { flex-direction: column; align-items: flex-start; gap: 18px; }
 }
 

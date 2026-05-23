@@ -67,9 +67,13 @@
           <label class="lbl" for="f-role">03 / ROLE</label>
           <input id="f-role" name="role" type="text" placeholder="Programme director, CTO, head of operations…" />
         </div>
-        <div class="form-row">
-          <label class="lbl" for="f-email">04 / EMAIL</label>
-          <input id="f-email" name="email" type="email" placeholder="you@institution.org" required />
+        <div class="form-row email-row">
+          <label class="lbl" for="f-email">04 / EMAIL ADDRESS</label>
+          <div class="email-field">
+            <span class="email-prefix" aria-hidden="true">mailto:</span>
+            <input id="f-email" name="email" type="email" placeholder="contact@institution.org" autocomplete="email" inputmode="email" required />
+          </div>
+          <p class="field-note">This is the address we will reply to. No newsletter, no automated sequence.</p>
         </div>
         <div class="form-row">
           <label class="lbl" for="f-region">05 / REGION</label>
