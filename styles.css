@@ -1346,18 +1346,22 @@ a { color: inherit; text-decoration: none; }
    CTA / CLOSING
    ============================================================ */
 .close-section {
-  padding: 160px 0 96px;
+  min-height: 52vh;
+  padding: 72px 0;
   background: var(--ink);
   color: var(--dark-text);
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
+.close-section .wrap { width: 100%; }
 .close-h {
   font-family: 'Instrument Serif', serif;
   font-size: clamp(60px, 9vw, 144px);
   line-height: 0.92;
   letter-spacing: -0.035em;
-  margin-bottom: 64px;
+  margin-bottom: 0;
   max-width: 1200px;
 }
 .close-h .it { font-style: italic; color: var(--dark-muted); }
@@ -2036,7 +2040,7 @@ a { color: inherit; text-decoration: none; }
   .page-head { padding-top: 130px; }
   .hero-headline { font-size: clamp(40px, 11vw, 64px); }
   .section { padding: 80px 0; }
-  .close-section { padding: 100px 0 80px; }
+  .close-section { min-height: 44vh; padding: 56px 0; }
   .feature-stats { grid-template-columns: 1fr; }
   .mia-stage { padding: 24px 16px; min-height: 580px; }
 }
@@ -2507,5 +2511,48 @@ h4,
   .reveal {
     opacity: 1;
     transform: none;
+  }
+}
+
+/* Final masthead alignment guard: Home and tab headers share the same top rhythm. */
+.hero,
+.page-head {
+  padding-top: var(--masthead-top);
+}
+
+.hero-meta-row,
+.page-head .ph-meta-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: end;
+  gap: 24px;
+  min-height: 14px;
+  margin-bottom: var(--masthead-meta-gap);
+}
+
+@media (max-width: 900px) {
+  .hero,
+  .page-head {
+    padding-top: 148px;
+  }
+
+  .hero-meta-row,
+  .page-head .ph-meta-row {
+    grid-template-columns: 1fr;
+    margin-bottom: 34px;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero,
+  .page-head {
+    padding-top: 118px;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero,
+  .page-head {
+    padding-top: 104px;
   }
 }
