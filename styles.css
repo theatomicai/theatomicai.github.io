@@ -1229,11 +1229,8 @@ a { color: inherit; text-decoration: none; }
   stroke: rgba(230, 236, 245, 0.055);
   stroke-width: 1;
 }
-.ops-land path {
-  fill: rgba(230, 236, 245, 0.085);
-  stroke: rgba(230, 236, 245, 0.2);
-  stroke-width: 0.85;
-  vector-effect: non-scaling-stroke;
+.ops-world-land {
+  opacity: 1;
 }
 .ops-routes path {
   fill: none;
@@ -1309,11 +1306,11 @@ a { color: inherit; text-decoration: none; }
   background: #fff;
   box-shadow: 0 0 0 1px rgba(230, 236, 245, 0.7), 0 0 42px rgba(230, 236, 245, 0.42);
 }
-.node-tegucigalpa { --x: 26.2%; --y: 50.7%; }
-.node-costa-rica { --x: 27.4%; --y: 53.4%; }
-.node-san-salvador { --x: 25.6%; --y: 51.8%; }
-.node-turin { --x: 61.6%; --y: 34.4%; }
-.node-geneva { --x: 51.8%; --y: 39.5%; }
+.node-tegucigalpa { --x: 27.7%; --y: 41.7%; }
+.node-costa-rica { --x: 28.5%; --y: 43.5%; }
+.node-san-salvador { --x: 27.2%; --y: 41.8%; }
+.node-turin { --x: 52%; --y: 27.5%; }
+.node-geneva { --x: 51.6%; --y: 27%; }
 @keyframes opsPulse {
   0% { transform: scale(.55); opacity: .42; }
   100% { transform: scale(1.75); opacity: 0; }
