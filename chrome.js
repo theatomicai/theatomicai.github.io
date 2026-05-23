@@ -2,23 +2,28 @@
    Pass current page id via <body data-page="platforms"> etc. */
 (() => {
   const cur = document.body.dataset.page || '';
+  const homeHref = './';
+
+  if (window.location.pathname.endsWith('/index.html')) {
+    window.history.replaceState(null, document.title, './');
+  }
 
   const navHTML = `
   <nav class="nav">
     <div class="wrap nav-inner">
-      <a class="nav-brand" href="index.html">
+      <a class="nav-brand" href="${homeHref}">
         <img class="nav-mark" src="assets/logo-atomicw.png" alt="" aria-hidden="true" />
         <span class="nav-name"><b>Atomic</b> AI</span>
       </a>
       <div class="nav-links">
-        <a href="index.html"     ${cur==='home'?'class="cur"':''}>Home</a>
+        <a href="${homeHref}"    ${cur==='home'?'class="cur"':''}>Home</a>
         <a href="platforms.html" ${cur==='platforms'?'class="cur"':''}>Platforms</a>
         <a href="projects.html"  ${cur==='projects'?'class="cur"':''}>Projects</a>
         <a href="about.html"     ${cur==='about'?'class="cur"':''}>About</a>
         <a href="contact.html"   ${cur==='contact'?'class="cur"':''}>Contact</a>
       </div>
       <div class="nav-right">
-        <span class="nav-locale">EN · ES &nbsp;/&nbsp; SJO · SAL · TGU</span>
+        <span class="nav-locale">EN · ES &nbsp;/&nbsp; HQ · SAN SALVADOR</span>
         <a class="nav-cta" href="contact.html">Start a project <span class="arrow"></span></a>
       </div>
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
@@ -28,13 +33,13 @@
       </button>
     </div>
     <div class="nav-mobile" aria-hidden="true">
-      <a href="index.html"     ${cur==='home'?'class="cur"':''}>Home</a>
+      <a href="${homeHref}"    ${cur==='home'?'class="cur"':''}>Home</a>
       <a href="platforms.html" ${cur==='platforms'?'class="cur"':''}>Platforms</a>
       <a href="projects.html"  ${cur==='projects'?'class="cur"':''}>Projects</a>
       <a href="about.html"     ${cur==='about'?'class="cur"':''}>About</a>
       <a href="contact.html"   ${cur==='contact'?'class="cur"':''}>Contact</a>
       <div class="nm-foot">
-        <span class="mono">EN · ES &nbsp;/&nbsp; SJO · SAL · TGU</span>
+        <span class="mono">EN · ES &nbsp;/&nbsp; HQ · SAN SALVADOR</span>
         <a class="nav-cta" href="contact.html">Start a project <span class="arrow"></span></a>
       </div>
     </div>
@@ -73,9 +78,7 @@
           <h5>Contact</h5>
           <ul>
             <li><a href="mailto:contact@theatomic.ai">contact@theatomic.ai</a></li>
-            <li>San Salvador · SV</li>
-            <li>San José · CR</li>
-            <li>Tegucigalpa · HN</li>
+            <li>Office · San Salvador · SV</li>
           </ul>
         </div>
       </div>
@@ -89,6 +92,7 @@
 
   document.body.insertAdjacentHTML('afterbegin', navHTML);
   document.body.insertAdjacentHTML('beforeend', footerHTML);
+  requestAnimationFrame(() => document.body.classList.add('page-ready'));
 
   // mobile nav toggle
   const nav = document.querySelector('.nav');
@@ -117,4 +121,23 @@
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
   els.forEach(el => io.observe(el));
+
+  // soft page handoff between local tabs/pages
+  document.addEventListener('click', (event) => {
+    const link = event.target.closest('a[href]');
+    if (!link || event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    if (link.target && link.target !== '_self') return;
+
+    const url = new URL(link.getAttribute('href'), window.location.href);
+    const sameOrigin = url.origin === window.location.origin;
+    const samePath = url.pathname === window.location.pathname;
+    const isDocument = url.pathname.endsWith('/') || url.pathname.endsWith('.html');
+    if (!sameOrigin || !isDocument || (samePath && url.hash)) return;
+
+    event.preventDefault();
+    document.body.classList.add('page-leaving');
+    window.setTimeout(() => {
+      window.location.href = url.href;
+    }, 180);
+  });
 })();
