@@ -267,98 +267,10 @@ a { color: inherit; text-decoration: none; }
   user-select: none;
   -webkit-user-drag: none;
 }
-.hero-atom-logo {
-  width: clamp(270px, 23vw, 480px);
-  height: auto;
-  display: block;
-  overflow: visible;
-  color: var(--ink);
-  user-select: none;
-}
-.atom-rest {
-  transform-origin: 334.5px 322.5px;
-  animation: atomRest 11s ease-in-out 3.35s infinite;
-}
-.atom-orbit,
-.atom-ring {
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  transform-origin: 334.5px 322.5px;
-  transform-box: view-box;
-}
-.atom-orbit {
-  stroke-width: 17;
-  stroke-dasharray: 590;
-  stroke-dashoffset: 590;
-  animation:
-    atomDraw 3.2s cubic-bezier(.19, 1, .22, 1) forwards,
-    atomSettle 3.2s cubic-bezier(.19, 1, .22, 1) forwards;
-}
-.atom-ring {
-  stroke-width: 5;
-  opacity: 0.72;
-  stroke-dasharray: 760;
-  stroke-dashoffset: 760;
-  animation:
-    atomRingDraw 3.45s cubic-bezier(.19, 1, .22, 1) .08s forwards,
-    atomSettle 3.45s cubic-bezier(.19, 1, .22, 1) .08s forwards;
-}
-.atom-ring-b {
-  stroke-width: 4;
-  opacity: 0.54;
-  animation-delay: .18s;
-}
-.atom-orbit-a { --start-rotate: -28deg; --start-scale: .84; animation-delay: .06s; }
-.atom-orbit-b { --start-rotate: 22deg; --start-scale: .86; animation-delay: .16s; }
-.atom-orbit-c { --start-rotate: 34deg; --start-scale: .82; animation-delay: .02s; }
-.atom-orbit-d { --start-rotate: -18deg; --start-scale: .88; animation-delay: .22s; }
-.atom-node {
-  fill: currentColor;
-  transform-origin: 334.5px 322.5px;
-  transform-box: view-box;
-  opacity: 0;
-  animation: atomNodeArrive 3.1s cubic-bezier(.19, 1, .22, 1) forwards;
-}
-.atom-node-left { --node-rotate: -64deg; animation-delay: .22s; }
-.atom-node-right { --node-rotate: 58deg; animation-delay: .32s; }
-.atom-node-top { --node-rotate: 42deg; animation-delay: .12s; }
-.atom-node-bottom { --node-rotate: -48deg; animation-delay: .4s; }
-@keyframes atomDraw {
-  0% { stroke-dashoffset: 590; opacity: 0; }
-  18% { opacity: .78; }
-  100% { stroke-dashoffset: 0; opacity: 1; }
-}
-@keyframes atomRingDraw {
-  0% { stroke-dashoffset: 760; opacity: 0; }
-  30% { opacity: .34; }
-  100% { stroke-dashoffset: 0; }
-}
-@keyframes atomSettle {
-  0% { transform: rotate(var(--start-rotate, 0deg)) scale(var(--start-scale, .86)); }
-  100% { transform: rotate(0deg) scale(1); }
-}
-@keyframes atomNodeArrive {
-  0% {
-    opacity: 0;
-    transform: rotate(var(--node-rotate)) scale(.76);
-  }
-  44% { opacity: 1; }
-  100% {
-    opacity: 1;
-    transform: rotate(0deg) scale(1);
-  }
-}
-@keyframes atomRest {
-  0%, 100% { transform: rotate(0deg) scale(1); }
-  50% { transform: rotate(.75deg) scale(1.012); }
-}
 @media (max-width: 900px) {
   .hero-headline-row { grid-template-columns: 1fr; gap: 28px; }
   .hero-mark-col { justify-content: flex-start; }
-  .hero-mark-img,
-  .hero-atom-logo { width: min(56vw, 260px); max-width: none; }
+  .hero-mark-img { width: min(56vw, 260px); max-width: none; }
 }
 
 .hero-meta-row {
@@ -580,45 +492,69 @@ a { color: inherit; text-decoration: none; }
 }
 .cap {
   position: relative;
-  padding: 36px 32px 28px;
+  padding: 28px 30px 24px;
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  min-height: 280px;
+  min-height: 236px;
   display: flex; flex-direction: column;
   background: var(--bg);
-  transition: background .3s ease;
+  overflow: hidden;
+  transition: background .35s ease, transform .35s ease;
 }
-.cap:hover { background: var(--bg-2); }
+.cap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(42, 111, 219, 0.055), transparent 24%),
+    linear-gradient(135deg, transparent 0 42%, rgba(15, 27, 51, 0.035) 42.2%, transparent 42.6%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .45s ease;
+}
+.cap:hover {
+  background: var(--bg-2);
+  transform: translateY(-2px);
+}
+.cap:hover::before { opacity: 1; }
 .cap-num {
   font-family: 'JetBrains Mono', monospace;
   font-size: 10px;
   color: var(--muted);
   letter-spacing: 0.1em;
-  margin-bottom: 28px;
+  margin-bottom: 22px;
+  position: relative;
+  z-index: 1;
 }
 .cap-title {
   font-family: 'Instrument Serif', serif;
-  font-size: 30px;
+  font-size: 28px;
   letter-spacing: -0.02em;
   line-height: 1.02;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
 }
 .cap-title .it { font-style: italic; color: var(--muted); display: block; font-size: 22px; margin-top: 2px; }
 .cap-desc {
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 13px;
+  line-height: 1.45;
   color: var(--muted);
   max-width: 360px;
   margin-bottom: auto;
+  position: relative;
+  z-index: 1;
 }
 .cap-foot {
   display: flex; justify-content: space-between; align-items: center;
-  margin-top: 28px;
+  margin-top: 22px;
   font-family: 'JetBrains Mono', monospace;
   font-size: 10px;
   color: var(--muted);
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  position: relative;
+  z-index: 1;
 }
 .cap-foot .live::before {
   content: ''; display: inline-block;
@@ -627,8 +563,13 @@ a { color: inherit; text-decoration: none; }
   margin-right: 8px; vertical-align: middle;
 }
 .cap-glyph {
-  position: absolute; top: 32px; right: 28px;
-  opacity: 0.85;
+  position: absolute; top: 26px; right: 26px;
+  opacity: 0.72;
+  transition: opacity .35s ease, transform .45s ease;
+}
+.cap:hover .cap-glyph {
+  opacity: 1;
+  transform: rotate(-4deg) translateY(-2px);
 }
 @media (max-width: 900px) {
   .cap-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1307,9 +1248,9 @@ a { color: inherit; text-decoration: none; }
 }
 .ops-world {
   position: absolute;
-  inset: 7% 4% 8%;
+  inset: 4% 4% 8%;
   width: 92%;
-  height: 82%;
+  height: 86%;
   opacity: 0.98;
 }
 .ops-graticule { display: none; }
@@ -1576,34 +1517,6 @@ a { color: inherit; text-decoration: none; }
   max-height: 118px;
 }
 
-/* Footer strip beneath grid */
-.collab-foot {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 0;
-  border-left: 1px solid var(--line);
-}
-.collab-foot .cf {
-  padding: 32px 32px 28px;
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-.collab-foot .cf .cfl {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
-  color: var(--muted);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-bottom: 14px;
-}
-.collab-foot .cf .cfv {
-  font-family: 'Instrument Serif', serif;
-  font-size: 22px;
-  letter-spacing: -0.015em;
-  line-height: 1.2;
-}
-.collab-foot .cf .cfv .it { font-style: italic; color: var(--muted); }
-
 @media (max-width: 980px) {
   .collab-section { padding: 76px 0 68px; }
   .collab-head { grid-template-columns: 1fr; gap: 24px; padding-bottom: 38px; }
@@ -1631,8 +1544,6 @@ a { color: inherit; text-decoration: none; }
     color: var(--dark-text);
     font-size: 9px;
   }
-  .collab-foot { grid-template-columns: 1fr; }
-  .collab-foot .cf { border-right: 0; }
 }
 @media (max-width: 560px) {
   .ops-map-stage { min-height: 520px; }
@@ -1649,19 +1560,8 @@ a { color: inherit; text-decoration: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .ops-routes path,
-  .op-node span::after,
-  .atom-rest,
-  .atom-orbit,
-  .atom-ring,
-  .atom-node {
+  .op-node span::after {
     animation: none;
-  }
-  .atom-orbit,
-  .atom-ring {
-    stroke-dashoffset: 0;
-  }
-  .atom-node {
-    opacity: 1;
   }
 }
 .partners-row {
@@ -2624,8 +2524,7 @@ h4,
     line-height: .96;
   }
 
-  .hero-mark-img,
-  .hero-atom-logo {
+  .hero-mark-img {
     width: min(52vw, 170px);
   }
 
@@ -2821,8 +2720,7 @@ h4,
     display: none;
   }
 
-  .collab-head,
-  .collab-foot {
+  .collab-head {
     gap: 22px;
   }
 
