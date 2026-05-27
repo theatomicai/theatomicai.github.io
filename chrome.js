@@ -451,11 +451,38 @@
     });
   };
 
+  const initHeroMark = (root = document) => {
+    root.querySelectorAll('.hero-mark-stack').forEach((stack) => {
+      if (stack.dataset.heroMarkReady === 'true') return;
+      stack.dataset.heroMarkReady = 'true';
+
+      if (reduceMotion) {
+        stack.classList.add('is-final');
+        return;
+      }
+
+      const finalMark = stack.querySelector('.hero-mark-final');
+      const revealFinal = () => {
+        if (stack.isConnected) stack.classList.add('is-final');
+      };
+
+      window.setTimeout(() => {
+        if (!finalMark || finalMark.complete || typeof finalMark.decode !== 'function') {
+          revealFinal();
+          return;
+        }
+
+        finalMark.decode().then(revealFinal).catch(revealFinal);
+      }, 7600);
+    });
+  };
+
   const initPage = (root = document) => {
     initReveal(root);
     initTicker(root);
     initProjectGrid(root);
     initOperationsMaps(root);
+    initHeroMark(root);
   };
 
   const bindShell = () => {

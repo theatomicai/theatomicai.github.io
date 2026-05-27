@@ -296,27 +296,31 @@ a { color: inherit; text-decoration: none; }
 .hero-mark-animation {
   -webkit-mask-image: radial-gradient(circle, #000 68%, transparent 74%);
   mask-image: radial-gradient(circle, #000 68%, transparent 74%);
-  animation: heroMarkAnimationExit 10.5s ease forwards;
+  opacity: 1;
+  transition: opacity 820ms ease;
 }
 .hero-mark-final {
   opacity: 0;
-  animation: heroMarkFinalReveal 10.5s ease forwards;
+  transform: scale(.985);
+  transform-origin: 50% 50%;
+  transition:
+    opacity 820ms ease,
+    transform 820ms cubic-bezier(.2, .74, .18, 1);
 }
-@keyframes heroMarkAnimationExit {
-  0%, 96% { opacity: 1; }
-  100% { opacity: 0; }
+.hero-mark-stack.is-final .hero-mark-animation {
+  opacity: 0;
 }
-@keyframes heroMarkFinalReveal {
-  0%, 96% { opacity: 0; }
-  100% { opacity: 1; }
+.hero-mark-stack.is-final .hero-mark-final {
+  opacity: 1;
+  transform: scale(1);
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-mark-animation {
     opacity: 0;
-    animation: none;
   }
   .hero-mark-final {
     opacity: 1;
+    transform: none;
     animation: none;
   }
 }
