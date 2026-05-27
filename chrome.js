@@ -473,7 +473,7 @@
         }
 
         finalMark.decode().then(revealFinal).catch(revealFinal);
-      }, 7200);
+      }, 6300);
     });
   };
 
