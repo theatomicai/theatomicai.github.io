@@ -411,6 +411,7 @@ body[data-page="home"] .hero .wrap {
   -webkit-user-drag: none;
 }
 .hero-mark-media .hero-mark-img,
+.hero-mark-motion,
 .hero-mark-video {
   position: absolute;
   inset: 0;
@@ -424,10 +425,11 @@ body[data-page="home"] .hero .wrap {
 .hero-mark-media .hero-mark-img {
   transform: scale(1.02);
 }
+.hero-mark-motion,
 .hero-mark-video {
   opacity: 0;
   pointer-events: none;
-  mix-blend-mode: multiply;
+  mix-blend-mode: normal;
   transform: scale(1.04);
   transition: opacity 180ms ease;
 }
@@ -435,6 +437,8 @@ body[data-page="home"] .hero .wrap {
   opacity: 1;
   transition: opacity 220ms ease;
 }
+.hero-mark-media.is-armed .hero-mark-motion,
+.hero-mark-media.is-playing .hero-mark-motion,
 .hero-mark-media.is-playing .hero-mark-video {
   opacity: 1;
 }

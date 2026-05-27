@@ -364,7 +364,51 @@
     const controls = new Map();
 
     marks.forEach((mark) => {
+      const motion = mark.querySelector('.hero-mark-motion');
       const video = mark.querySelector('.hero-mark-video');
+      if (motion) {
+        let timerId = 0;
+        const posterSrc = motion.getAttribute('src');
+        const motionSrc = motion.dataset.motionSrc || posterSrc;
+        const duration = Number.parseFloat(motion.dataset.duration || '2700');
+
+        const clearTimer = () => {
+          if (!timerId) return;
+          window.clearTimeout(timerId);
+          timerId = 0;
+        };
+
+        const finish = () => {
+          clearTimer();
+          mark.classList.remove('is-playing', 'is-armed');
+          mark.classList.add('is-final');
+        };
+
+        const reset = () => {
+          clearTimer();
+          motion.src = posterSrc;
+          mark.classList.remove('is-playing', 'is-final');
+          mark.classList.add('is-armed');
+        };
+
+        const play = () => {
+          if (reduceMotion) {
+            finish();
+            return;
+          }
+
+          reset();
+          mark.classList.add('is-playing');
+          window.requestAnimationFrame(() => {
+            motion.src = motionSrc;
+            timerId = window.setTimeout(finish, Number.isFinite(duration) ? duration : 2700);
+          });
+        };
+
+        controls.set(mark, { play, reset });
+        return;
+      }
+
       if (!video) return;
 
       let frameId = 0;
