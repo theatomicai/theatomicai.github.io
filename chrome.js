@@ -451,7 +451,6 @@
     });
   };
 
-
   const initPage = (root = document) => {
     initReveal(root);
     initTicker(root);
