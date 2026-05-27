@@ -507,6 +507,7 @@
 
   const boot = () => {
     normalizeIndexUrl();
+    document.documentElement.dataset.atomicBootId = bootId;
     document.body.dataset.page = currentPage() || 'home';
     renderChrome();
     bindShell();
