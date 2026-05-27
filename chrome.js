@@ -12,6 +12,7 @@
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const bootId = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
   let revealObserver = null;
+  let heroMarkObserver = null;
   let isBound = false;
   let navToken = 0;
 
@@ -62,7 +63,7 @@
       <nav class="nav" data-app-chrome="true" data-screen-label="Nav">
         <div class="wrap nav-inner">
           <a class="nav-brand" href="./">
-            <img class="nav-mark" src="assets/logo-atomicw.png" alt="" aria-hidden="true" />
+            <img class="nav-mark" src="assets/logo-atomicw-hero.png" alt="" aria-hidden="true" />
             <span class="nav-name"><b>Atomic</b> AI</span>
           </a>
           <div class="nav-links">
@@ -351,6 +352,115 @@
     els.forEach((el) => revealObserver.observe(el));
   };
 
+  const initHeroMark = (root = document) => {
+    if (heroMarkObserver) {
+      heroMarkObserver.disconnect();
+      heroMarkObserver = null;
+    }
+
+    const marks = Array.from(root.querySelectorAll('[data-hero-mark]'));
+    if (!marks.length) return;
+
+    const controls = new Map();
+
+    marks.forEach((mark) => {
+      const video = mark.querySelector('.hero-mark-video');
+      if (!video) return;
+
+      let frameId = 0;
+      const startAt = Number.parseFloat(video.dataset.startAt || '0');
+      const stopAt = Number.parseFloat(video.dataset.stopAt || '');
+      const playbackRate = Number.parseFloat(video.dataset.rate || '1');
+
+      const cancelFrameWatch = () => {
+        if (!frameId) return;
+        window.cancelAnimationFrame(frameId);
+        frameId = 0;
+      };
+
+      const seek = (time) => {
+        if (!Number.isFinite(time)) return;
+        try {
+          video.currentTime = time;
+        } catch (error) {
+          // Some browsers reject early seeks before metadata is ready.
+        }
+      };
+
+      const finish = () => {
+        cancelFrameWatch();
+        video.pause();
+        seek(stopAt);
+        mark.classList.remove('is-playing', 'is-armed');
+        mark.classList.add('is-final');
+      };
+
+      const watchFrame = () => {
+        if (Number.isFinite(stopAt) && video.currentTime >= stopAt) {
+          finish();
+          return;
+        }
+
+        frameId = window.requestAnimationFrame(watchFrame);
+      };
+
+      const reset = () => {
+        cancelFrameWatch();
+        video.pause();
+        seek(startAt);
+        mark.classList.remove('is-playing', 'is-final');
+        mark.classList.add('is-armed');
+      };
+
+      const play = () => {
+        if (reduceMotion) {
+          finish();
+          return;
+        }
+
+        reset();
+        video.playbackRate = Number.isFinite(playbackRate) ? playbackRate : 1;
+        mark.classList.add('is-playing');
+
+        const promise = video.play();
+        if (promise && typeof promise.then === 'function') {
+          promise.then(() => {
+            frameId = window.requestAnimationFrame(watchFrame);
+          }).catch(finish);
+        } else {
+          frameId = window.requestAnimationFrame(watchFrame);
+        }
+      };
+
+      video.addEventListener('ended', finish);
+      video.addEventListener('loadedmetadata', () => seek(startAt), { once: true });
+      video.addEventListener('timeupdate', () => {
+        if (Number.isFinite(stopAt) && video.currentTime >= stopAt) finish();
+      });
+
+      controls.set(mark, { play, reset });
+    });
+
+    if (!controls.size) return;
+
+    if (!('IntersectionObserver' in window)) {
+      controls.forEach((control) => control.play());
+      return;
+    }
+
+    heroMarkObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const control = controls.get(entry.target);
+        if (!control) return;
+
+        if (entry.isIntersecting) control.play();
+        else control.reset();
+      });
+    }, { threshold: 0.34, rootMargin: '0px 0px -10% 0px' });
+
+    controls.forEach((control, mark) => heroMarkObserver.observe(mark));
+  };
+
   const initTicker = (root = document) => {
     const ticker = root.querySelector('#ticker');
     if (!ticker || ticker.dataset.ready === 'true') return;
@@ -453,6 +563,7 @@
 
   const initPage = (root = document) => {
     initReveal(root);
+    initHeroMark(root);
     initTicker(root);
     initProjectGrid(root);
     initOperationsMaps(root);

@@ -205,8 +205,8 @@ body[data-page="home"] .close-section {
   letter-spacing: 0.02em;
 }
 .nav-mark {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   object-fit: contain;
   display: block;
   flex-shrink: 0;
@@ -330,6 +330,11 @@ body[data-page="home"] .close-section {
   overflow: hidden;
 }
 
+body[data-page="home"] .hero {
+  padding-top: 112px;
+  background: #fff;
+}
+
 body[data-page="home"] .os-boot {
   background: #fff;
 }
@@ -369,6 +374,7 @@ body[data-page="home"] .os-boot::after {
 body[data-page="home"] .hero .wrap {
   position: relative;
   z-index: 1;
+  background: #fff;
 }
 
 .hero-headline-row {
@@ -386,6 +392,17 @@ body[data-page="home"] .hero .wrap {
   align-items: center;
   justify-content: center;
 }
+.hero-mark-media {
+  position: relative;
+  width: clamp(290px, 24vw, 500px);
+  aspect-ratio: 1;
+  display: block;
+  overflow: hidden;
+  isolation: isolate;
+  background: #fff;
+  border-radius: 50%;
+  clip-path: circle(47% at 50% 50%);
+}
 .hero-mark-img {
   width: clamp(290px, 24vw, 500px);
   height: auto;
@@ -393,9 +410,45 @@ body[data-page="home"] .hero .wrap {
   user-select: none;
   -webkit-user-drag: none;
 }
+.hero-mark-media .hero-mark-img,
+.hero-mark-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center 25%;
+  transform-origin: center;
+}
+.hero-mark-media .hero-mark-img {
+  transform: scale(1.02);
+}
+.hero-mark-video {
+  opacity: 0;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  transform: scale(1.04);
+  transition: opacity 180ms ease;
+}
+.hero-mark-fallback {
+  opacity: 1;
+  transition: opacity 220ms ease;
+}
+.hero-mark-media.is-playing .hero-mark-video {
+  opacity: 1;
+}
+.hero-mark-media.is-armed .hero-mark-fallback,
+.hero-mark-media.is-playing .hero-mark-fallback {
+  opacity: 0;
+}
+.hero-mark-media.is-final .hero-mark-fallback {
+  opacity: 1;
+}
 @media (max-width: 900px) {
   .hero-headline-row { grid-template-columns: 1fr; gap: 28px; }
   .hero-mark-col { justify-content: flex-start; }
+  .hero-mark-media { width: min(58vw, 280px); }
   .hero-mark-img { width: min(58vw, 280px); max-width: none; }
 }
 
@@ -2865,6 +2918,10 @@ h4,
   }
 
   .hero-mark-img {
+    width: min(56vw, 190px);
+  }
+
+  .hero-mark-media {
     width: min(56vw, 190px);
   }
 
