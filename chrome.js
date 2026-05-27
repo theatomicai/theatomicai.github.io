@@ -93,7 +93,7 @@
         <div class="foot-grid">
           <div class="brand-blk">
             <div class="name"><img class="mk" src="assets/logo-atomicw-white.png" alt="" aria-hidden="true" />Atomic <span class="it">AI</span></div>
-            <p>Human-centered AI infrastructure for institutions and enterprises. Headquartered in San Salvador, with deployments across Central America. Bilingual by default.</p>
+            <p>Human-centered AI infrastructure for institutions and enterprises. Headquartered in San Salvador, building for multilingual deployments across regions.</p>
           </div>
           <div>
             <h5>Platforms</h5>
@@ -102,7 +102,7 @@
               <li><a href="platforms.html#knowledge">Institutional Knowledge</a></li>
               <li><a href="platforms.html#operational">Operational Intelligence</a></li>
               <li><a href="platforms.html#learning">AI Learning</a></li>
-              <li><a href="platforms.html#retrieval">Semantic Retrieval</a></li>
+              <li><a href="platforms.html#retrieval">Retrieval &amp; Reasoning</a></li>
               <li><a href="platforms.html#workflows">Enterprise Workflows</a></li>
             </ul>
           </div>
@@ -531,10 +531,10 @@
       ['LIVE', 'Mia &mdash; Mentor System', 'TGU &middot; HN'],
       ['LIVE', 'Potenza &mdash; Solar Ops', 'SAL &middot; SV'],
       ['LIVE', 'Ortodoncia &mdash; Clinical Ops', 'SAL &middot; SV'],
-      ['DEPLOY', 'ACTEMP Knowledge Portal', 'LATAM &middot; ILO'],
+      ['DEPLOY', 'ACTEMP Knowledge Portal', 'ILO &middot; multi-region'],
       ['LIVE', 'Custom Software &mdash; Clinics', 'SAL &middot; SV'],
-      ['READY', 'AI Literacy &mdash; Training', 'LATAM'],
-      ['INDEX', 'Semantic Layer &middot; v4.2.1', 'global'],
+      ['READY', 'AI Literacy &mdash; Training', 'multilingual'],
+      ['INDEX', 'Reasoning Layer &middot; v4.2.1', 'global'],
       ['OBS', 'Stream OK &mdash; 14,892 ev/s', 'observer'],
     ];
 
