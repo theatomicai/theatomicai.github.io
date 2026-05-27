@@ -12,43 +12,10 @@
 <link rel="apple-touch-icon" href="assets/atomic-mark.png" />
 <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body data-page="home">
 <div class="grain" aria-hidden="true"></div>
 
-<!-- ================== NAV ================== -->
-<nav class="nav" data-screen-label="Nav">
-  <div class="wrap nav-inner">
-    <a class="nav-brand" href="./">
-      <img class="nav-mark" src="assets/logo-atomicw.png" alt="" aria-hidden="true" />
-      <span class="nav-name"><b>Atomic</b> AI</span>
-    </a>
-    <div class="nav-links">
-      <a href="./" class="cur">Home</a>
-      <a href="platforms.html">Platforms</a>
-      <a href="projects.html">Projects</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <div class="nav-right">
-      <a class="nav-cta" href="contact.html">Start a project <span class="arrow"></span></a>
-    </div>
-    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-      <span class="nt-bar"></span>
-      <span class="nt-bar"></span>
-      <span class="nt-bar"></span>
-    </button>
-  </div>
-  <div class="nav-mobile" aria-hidden="true">
-    <a href="./" class="cur">Home</a>
-    <a href="platforms.html">Platforms</a>
-    <a href="projects.html">Projects</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <div class="nm-foot">
-      <a class="nav-cta" href="contact.html">Start a project <span class="arrow"></span></a>
-    </div>
-  </div>
-</nav>
+<main id="site-main" class="site-main" data-page-root data-page="home">
 
 <!-- ================== HERO ================== -->
 <header class="hero" data-screen-label="01 Hero">
@@ -67,7 +34,7 @@
         <span class="quiet">by institutions.</span>
       </h1>
       <div class="hero-mark-col reveal in">
-        <img src="assets/logo-atomicw-hero.png" alt="Atomic AI" class="hero-mark-img" />
+        <img src="assets/logo-atomicw-hero-transparent.webp" alt="Atomic AI" class="hero-mark-img hero-mark-animation" />
       </div>
     </div>
 
@@ -356,8 +323,9 @@
   </div>
 </section>
 
-<!-- ================== FOOT ================== -->
-<footer class="foot">
+</main>
+
+<template data-legacy-footer-disabled>
   <div class="wrap">
     <div class="foot-grid">
       <div class="brand-blk">
@@ -397,9 +365,9 @@
       <span>v 4.2.1 · BUILD 2026.05.21</span>
     </div>
   </div>
-</footer>
+</template>
 
-<script>
+<script type="application/json" data-legacy-disabled>
 if (window.location.pathname.endsWith('/index.html')) {
   window.history.replaceState(null, document.title, './');
 }
@@ -486,6 +454,6 @@ document.addEventListener('click', (event) => {
   window.addEventListener('resize', () => { if (window.innerWidth > 880) setOpen(false); });
 })();
 </script>
-<script src="operations-map.js"></script>
+<script src="chrome.js"></script>
 </body>
 </html>
