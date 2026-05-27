@@ -273,6 +273,12 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   justify-content: center;
 }
+.hero-mark-stack {
+  position: relative;
+  display: block;
+  width: clamp(290px, 24vw, 500px);
+  aspect-ratio: 1;
+}
 .hero-mark-img {
   width: clamp(290px, 24vw, 500px);
   height: auto;
@@ -280,13 +286,44 @@ a { color: inherit; text-decoration: none; }
   user-select: none;
   -webkit-user-drag: none;
 }
+.hero-mark-stack .hero-mark-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 .hero-mark-animation {
   -webkit-mask-image: radial-gradient(circle, #000 68%, transparent 74%);
   mask-image: radial-gradient(circle, #000 68%, transparent 74%);
+  animation: heroMarkAnimationExit 10.5s ease forwards;
+}
+.hero-mark-final {
+  opacity: 0;
+  animation: heroMarkFinalReveal 10.5s ease forwards;
+}
+@keyframes heroMarkAnimationExit {
+  0%, 96% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes heroMarkFinalReveal {
+  0%, 96% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-mark-animation {
+    opacity: 0;
+    animation: none;
+  }
+  .hero-mark-final {
+    opacity: 1;
+    animation: none;
+  }
 }
 @media (max-width: 900px) {
   .hero-headline-row { grid-template-columns: 1fr; gap: 28px; }
   .hero-mark-col { justify-content: flex-start; }
+  .hero-mark-stack { width: min(58vw, 280px); max-width: none; }
   .hero-mark-img { width: min(58vw, 280px); max-width: none; }
 }
 
@@ -2573,6 +2610,10 @@ h4,
   }
 
   .hero-mark-img {
+    width: min(56vw, 190px);
+  }
+
+  .hero-mark-stack {
     width: min(56vw, 190px);
   }
 
