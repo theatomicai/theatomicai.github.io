@@ -430,7 +430,7 @@ body[data-page="home"] .hero .wrap {
   opacity: 0;
   pointer-events: none;
   mix-blend-mode: normal;
-  transform: scale(1.04);
+  transform: scale(1.02);
   transition: opacity 180ms ease;
 }
 .hero-mark-fallback {
@@ -438,11 +438,13 @@ body[data-page="home"] .hero .wrap {
   transition: opacity 220ms ease;
 }
 .hero-mark-media.is-armed .hero-mark-motion,
+.hero-mark-media.is-motion-final .hero-mark-motion,
 .hero-mark-media.is-playing .hero-mark-motion,
 .hero-mark-media.is-playing .hero-mark-video {
   opacity: 1;
 }
 .hero-mark-media.is-armed .hero-mark-fallback,
+.hero-mark-media.is-motion-final .hero-mark-fallback,
 .hero-mark-media.is-playing .hero-mark-fallback {
   opacity: 0;
 }

@@ -370,7 +370,12 @@
         let timerId = 0;
         const posterSrc = motion.getAttribute('src');
         const motionSrc = motion.dataset.motionSrc || posterSrc;
+        const endSrc = motion.dataset.endSrc || motionSrc;
         const duration = Number.parseFloat(motion.dataset.duration || '2700');
+        const preload = new Image();
+        const preloadEnd = new Image();
+        preload.src = motionSrc;
+        preloadEnd.src = endSrc;
 
         const clearTimer = () => {
           if (!timerId) return;
@@ -378,31 +383,44 @@
           timerId = 0;
         };
 
-        const finish = () => {
+        const finish = (useFallback = false) => {
           clearTimer();
+          if (!useFallback) motion.src = endSrc;
           mark.classList.remove('is-playing', 'is-armed');
-          mark.classList.add('is-final');
+          mark.classList.toggle('is-final', useFallback);
+          mark.classList.toggle('is-motion-final', !useFallback);
         };
 
         const reset = () => {
           clearTimer();
           motion.src = posterSrc;
-          mark.classList.remove('is-playing', 'is-final');
+          mark.classList.remove('is-playing', 'is-final', 'is-motion-final');
           mark.classList.add('is-armed');
         };
 
         const play = () => {
           if (reduceMotion) {
-            finish();
+            finish(true);
             return;
           }
 
           reset();
           mark.classList.add('is-playing');
-          window.requestAnimationFrame(() => {
+
+          const startMotion = () => window.requestAnimationFrame(() => {
             motion.src = motionSrc;
-            timerId = window.setTimeout(finish, Number.isFinite(duration) ? duration : 2700);
+            window.requestAnimationFrame(() => {
+              timerId = window.setTimeout(finish, Number.isFinite(duration) ? duration : 2700);
+            });
           });
+
+          if (preload.complete) {
+            startMotion();
+            return;
+          }
+
+          preload.onload = startMotion;
+          preload.onerror = finish;
         };
 
         controls.set(mark, { play, reset });
